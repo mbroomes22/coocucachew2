@@ -1,0 +1,25 @@
+{
+  "config": {
+    "locale": "en"
+  },
+  "model": {
+    "subTotal": {
+      "type": "randomNumberBetween",
+      "value": [3, 45]
+    },
+    "total": {
+      "type": "randomNumberBetween",
+      "value": [8, 50]
+    },
+    "isPending": {
+      "type": "faker",
+      "value": "random.boolean"
+    },
+    "userId": {
+      "type": "incrementNumber",
+      "options": {
+        "from": 1
+      }
+    }
+  }
+}

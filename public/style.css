@@ -1,0 +1,410 @@
+html {
+  background: linear-gradient(to bottom, #f8e7ed 0%, #f2e8f8 100%);
+}
+
+body {
+  font-family: sans-serif;
+  /* background: url('rainbow-buttercream-frosting.jpg') no-repeat center center fixed; */
+  /* background-size: cover; */
+}
+
+.title {
+  font-family: 'Satisfy', cursive;
+  color: #fe00fe;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+}
+
+.login-field {
+  padding: 0.42857em;
+    width: 90%;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 1%;
+    border-radius: 6px;
+    border: 1px transparent solid;
+    font-size: 1em;
+}
+
+label {
+  display: block;
+}
+
+nav a {
+  display: inline-block;
+  margin: 1em;
+  font-family: 'Nunito', sans-serif;
+}
+
+nav a:hover {
+  color: rgb(47, 48, 49);
+  background:#b1c9f7;
+  border-radius: 10px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+  text-decoration: none;
+}
+
+.left-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mid-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.right-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+form div {
+  margin: 1em;
+  display: inline-block;
+}
+
+.prodBtn {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.prodBtn:hover {
+  background: #B8CFF9;
+  color: #000;
+}
+
+.buttonC {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #81a0da;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.buttonC:hover {
+  background: #B8CFF9;
+  color: #000;
+}
+
+.header {
+  background-color: #dfb3bd;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: Chalkduster, fantasy;
+}
+
+.singleProduct_page {
+  font-family: Chalkduster, fantasy;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.singleProduct_container {
+  display: flex;
+  justify-content: center;
+}
+
+.left-box {
+  border-right: 1em solid #dfb3bd;
+  display: flex;
+  justify-content: center;
+}
+
+.right-box {
+  padding: 5%;
+}
+
+.singleProduct_image img {
+  /* max-width: 550px; */
+  max-width: 100%;
+}
+
+.quantity_change {
+  display: flex;
+  justify-content: center;
+}
+
+#cart h3 {
+  background-color: rgba(26, 155, 194, 0.824);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: Chalkduster, fantasy;
+  text-shadow: 1px 1px grey;
+}
+
+#main-header {
+  background-color: rgba(26, 155, 194, 0.824);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: Chalkduster, fantasy;
+}
+
+.cartproducts {
+  font-family: Chalkduster, fantasy;
+  text-shadow: 1px 1px white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 1rem;
+}
+
+#cart_total {
+  font-family: Chalkduster, fantasy;
+  padding: 1rem;
+  text-shadow: 1px 1px white;
+}
+
+.field {
+  padding: 0.42857em;
+  width: 30%;
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 1%;
+  border-radius: 6px;
+  border: 1px transparent solid;
+  font-size: 1em;
+}
+
+.product-field {
+  padding: 0.42857em;
+  width: 20%;
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 1%;
+  border-radius: 6px;
+  border: 1px blue solid;
+  font-size: 1em;
+}
+
+:required {
+  border-color: rgb(48, 242, 58);
+}
+
+:invalid {
+  border-color: red;
+}
+
+:required:focus:valid {
+  background: url('https://clipartart.com/images/area-check-clear-clipart-1.jpg')
+    no-repeat 95% 50%;
+  background-size: 25px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+  padding: 1rem;
+  font-family: Chalkduster, fantasy;
+}
+
+@media screen and (max-width: 1200px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    padding: 1rem;
+    font-family: Chalkduster, fantasy;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    padding: 1rem;
+    font-family: Chalkduster, fantasy;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+    padding: 1rem;
+    font-family: Chalkduster, fantasy;
+  }
+}
+
+.card {
+  box-shadow: 0px 1px 5px #555;
+  background-color: white;
+  width:300px;
+  border-radius: 15px 15px 0 0;
+}
+
+.checkout-card-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+
+.checkout-card {
+  box-shadow: 0px 1px 5px #555;
+  background-color: white;
+  padding: 1rem;
+}
+
+.form {
+  margin: 2%;
+}
+
+
+
+.all-product-container {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  word-spacing: -1.4px;
+  color: #c46aa6;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+.all-prod-img {
+  width: 300px;
+  max-height: 380px;
+  min-height: 300px;
+  border-radius: 15px 15px 0 0;
+}
+
+.product-price {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.6px;
+  word-spacing: -1.4px;
+  color: #a169c1;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  margin: 10%;
+}
+
+.product-description {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+  word-spacing: 2.4px;
+  line-height: 2;
+  color: #5c0b70;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: capitalize;
+  margin: 10%;
+}
+
+.singleProduct-description {
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-size: 30px;
+  letter-spacing: 0.2px;
+  word-spacing: 2px;
+  color: #5c0b70;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+#navBar-container {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #362f47;
+  font-weight: 700;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+
+.navbar {
+  /* background: linear-gradient(to left, #ba7453, #d1a984); */
+  background: #B8CFF9;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  border: none;
+  outline: 0;
+  padding: 12px;
+  width: 100%;
+  border-bottom: 1em solid #81a0da;
+}
+
+.navbar a {
+  color: black;
+  font-weight: bold;
+  text-shadow: 1px 1px white;
+}
+
+.main-img {
+  background: url("cupcake.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 400px;
+  width:100%;
+  border: none;
+  border-bottom: .5em solid #cc89b0;
+  outline: 0;
+  padding: 12px;
+  display: flex;
+  font-size: xx-large;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 5%;
+}

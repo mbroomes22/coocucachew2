@@ -1,0 +1,33 @@
+{
+  "config": {
+    "locale": "en"
+  },
+  "model": {
+    "name": {
+      "type": "faker",
+      "value": "name.findName"
+    },
+    "email": {
+      "type": "faker",
+      "value": "internet.email"
+    },
+    "password": {
+      "type": "faker",
+      "value": "internet.password"
+    },
+    "address": {
+      "type": "append",
+      "options": {
+        "text": ", New York, NY 10034"
+      },
+      "value": {
+        "type": "faker",
+        "value": "address.streetAddress"
+      }
+    },
+    "isLoggedIn": {
+      "type": "faker",
+      "value": "random.boolean"
+    }
+  }
+}

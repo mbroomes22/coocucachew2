@@ -1,0 +1,23 @@
+{
+  "config": {
+    "locale": "en"
+  },
+  "model": {
+    "quantity": {
+      "type": "randomNumberBetween",
+      "value": [1, 5]
+    },
+    "price": {
+      "type": "randomNumberBetween",
+      "value": [3, 10]
+    },
+    "productId": {
+      "type": "randomNumberBetween",
+      "value": [1, 20]
+    },
+    "orderId": {
+      "type": "randomNumberBetween",
+      "value": [1, 15]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - 12 # uses node version 12
+
+services:
+  - postgresql # starts up postgres
+addons:
+  postgresql: '10' # recent postgres version on Travis
+dist: xenial # uses xenial environment
+notifications:
+  email:
+    on_success: change # default: change (only when going from broken to fixed)
+    on_failure: always # default: always (which is annoying, as it should be)
+install:
+  - npm ci # faster, goes only from package-lock
+before_script:
+  - psql -c 'create database "coocucachew-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
+script:
+  - npm test # test the code
+  - npm run build-client # make the bundle
+before_deploy: # omit node_modules, since we set skip_cleanup below
+  - rm -rf node_modules
+deploy: # see README for details on these keys
+  # prevents travis from deleting the build
+  skip_cleanup: true
+  provider: heroku
+  # app should be your heroku app name; see README
+  app: coocucachew
+  # the secure key indicates an encrypted value; see README
+  api_key:
+    secure: VOOyIdFZhieDOD868PN3lwlJL8mEAYeGtUznkUraziR1Wk1fhe1CHOU36DO7/AtJ6ym1WgtKoInnxJVFrUxIcnZ+EZ1F6Yd1bgFwzC773C7YuL5blIw0raPvZ3+KU+Ht5JSw31EHf5tYzVXyvYOmH7NGnDUcgfeyaeLMr2VefbtZKZTOdk1fK+HCrubOUao6l0VsEuYWYgb16RH2mjXrBfyw46eJ+V65qofJRV0iM9g0HXboxQNL9WX1prjHebG2bUB0l1T9WoLBk72+SJCo7iDsBAMpnCOuTsmAFcvveClXX8Gb8KOEAFl9BiIzRq2fm/+83NnH0ltYxV5dpTVOawFikd+uffHKGJlEjT4py4Y/UCP1AhHsp+Z0LGpvZALRlVcpRXp9+DKT7Rd80RpV02X4VJJaD8aHiegvqx66ecpjjoDv8Pj6gtj0pBndhmpinwAhEFfOV6lXc2zzb6K2Bd25BW/B19gs6p4ZQL0/vKUAtCnamKGJn1JtCXLhBqEYmpRhUmdS79PYw++p6wYr9Nb0M9d48rDPQ11Sdg5w9GWc71NAkyk9gAJS7jQhxV3Goo+rwL6NDsweoF/wpECs/cWppzBzomEFCeow438SM5Va+tC1LQ2m6mPvjqynaTKtbs6m02kvq3+fife17Bz/kN7d6TJqoi+rDggYzCvzXSE=

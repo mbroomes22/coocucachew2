@@ -1,0 +1,358 @@
+
+[
+  {
+    "name": "Beary Family",
+    "description":
+      " These cheery and cute cookies will delight kids of all ages! The idea of using candy for The bears' features will bring you and your kids a nice day!",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2017/10/exps11714_THCA153054D08_11_3b-2-696x696.jpg",
+    "price": 5,
+    "productCategoryId": 1
+  },
+  {
+    "name": "Candy Cane Blossom",
+    "description":
+      " We like to stir different flavored candy canes into the dough for fun variety. ",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2018/01/Candy-Cane-Blossom-Cookies_exps49911_TH2379801B07_10_4b_RMS.jpg",
+    "price": 10,
+    "productCategoryId": 1
+  },
+  {
+    "name": "Cappuccino Kiss",
+    "description":
+      " This recipe combines two of my favorite flavors: coffee and cinnamon. You can always find them on my holiday treat trays.",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2018/01/Fudge-Bonbon-Cookies_exps9494_CC2661980C04_06_3bC_RMS-1.jpg",
+    "price": 7,
+    "productCategoryId": 2
+  },
+  {
+    "name": "Strawberry Lemon Cupcake",
+    "description":
+      "Light, fluffy cupcakes vanilla cake topped with a strawberry buttercream frosting and fresh strawberry.",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2019/07/Strawberry-Lemon-Cupcakes_EXPS_THAS19_238728_B04_19_7b-696x696.jpg",
+    "price": 6,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Apple Platz",
+    "description":
+      "Platz occupies the sweet spot between cake and pie in a cupcake",
+    "imageUrl":
+      "https://cincyshopper.com/wp-content/uploads/2015/07/Apple-Pie-Cupcakes-2.jpg",
+    "price": 3,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Summer Berry'",
+    "description": "A delicious vanilla cupcake with a mix of berries",
+    "imageUrl":
+      "https://bakerbynature.com/wp-content/uploads/2017/04/untitled-51-of-68-2.jpg",
+    "price": 5,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Reese's Cupcakes",
+    "description":
+      "Chocolate peanut butter swirled cake and chocolate peanut butter swirled frosting makes these the ULTIMATE Reese’s Cupcakes! Plus there’s chopped peanut butter cups in the cake batter! We know you’ll fall in love with this reese’s cupcake with reese’s frosting.",
+    "imageUrl":
+      "https://thefirstyearblog.com/wp-content/uploads/2015/10/Reeses-Cupcakes-6-735x1101.jpg",
+    "price": 9,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Snickerdoodle",
+    "description":
+      " Mixed with snickerdoodle frosting (cinnamon sugar) and crushed snickerdoodle cookies, coated in white chocolate, topped with white chocolate drizzles and crushed snickerdoodles.",
+    "imageUrl":
+      "https://wildwildwhisk.com/wp-content/uploads/2018/05/Snickerdoodle-Cookies-2.jpg",
+    "price": 5,
+    "productCategoryId": 1
+  },
+  {
+    "name": "Bourbon Walnut Toffee",
+    "description":
+      "Organic toffee and walnut cookie now infused with organic bourbon! It's walnutty, crunchy toffee, alcohol infused goodness in a soft baked cookie that will make your mouth sing!",
+    "imageUrl":
+      "https://cdn.shopify.com/s/files/1/1540/1281/products/BoozyBourbonWalnutToffee_New_540x.png?v=1544748784",
+    "price": 7,
+    "productCategoryId": 1
+  },
+  {
+    "name": "Milky Way",
+    "description":
+      " Chocolate cake, mixed with chocolate frosting and Milky Way candy pieces, coated in milk chocolate, topped with milk chocoalte drizzles and a Milky Way candy piece",
+    "imageUrl":
+      "https://i.etsystatic.com/8060728/r/il/294b76/453982422/il_1588xN.453982422_bpnc.jpg",
+    "price": 7,
+    "productCategoryId": 3
+  },
+  {
+    "name": "Pink Burst",
+    "description":
+      " Lemon cake, mixed with lemon frosting, coated in strawberry chocolate, topped with yellow chocolate drizzles and mixed yellow and white sprinkles",
+    "imageUrl":
+      "https://i.etsystatic.com/7996733/r/il/4813d4/2255346554/il_1588xN.2255346554_mvv7.jpg",
+    "price": 4,
+    "productCategoryId": 3
+  },
+  {
+    "name": "Creamsicle",
+    "description":
+      " Red velvet cake, mixed with vanilla frosting, coated in white chocolate with fruit chocolate drizzles.",
+    "imageUrl":
+      "https://i.etsystatic.com/7996733/r/il/2d3719/2302950429/il_1588xN.2302950429_qrce.jpg",
+    "price": 10,
+    "productCategoryId": 3
+  },
+  {
+    "name": "Lavender Vanilla Cupcake",
+    "description":
+      "The classic cupcake meets lavender, which is just the perfect flavoring to make your cakes sing. Couple that with a dash of heady vanilla extract and you are onto a winner!",
+    "imageUrl":
+      "https://www.thespruceeats.com/thmb/E7XBY9Ubrn8GWaWeEX1G5yC6gWE=/3432x3432/smart/filters:no_upscale()/LavenderCupCakes-spruce-4-5abd4b68eb97de003785fea2.jpg",
+    "price": 10,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Amaretto Dream Cupcake",
+    "description":
+      " Treat yourself to these indulgent little cupcakes laced with the irresistible flavor of Amaretto and slivered almonds.",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2018/01/exps3_BSF2679079C06_15_5b_RMS-1-696x696.jpg",
+    "price": 6,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Espresso Lover",
+    "description":
+      " These mocha cupcakes are coffee and espresso-infused, with a subtle chocolate flavor, and topped with an espresso-spiked buttercream frosting.",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2017/10/Spice-Cupcakes_exps8464_RDS2447887A10_26_2b_RMS-2-696x696.jpg",
+    "price": 8,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Orange-Nutella Boat",
+    "description":
+      " These cups are easy to put on a platter for impressive presentation—they're a true one-bite pleasure! Half a strawberry or a piece of mandarin orange complements the hazelnut chocolate flavor of the Nutella.",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2017/10/exps53962_THCA173831C03_11_5b-696x696.jpg",
+    "price": 8,
+    "productCategoryId": 2
+  },
+  {
+    "name": "S’mOreos",
+    "description":
+      " Slather on the inside of the graham cracker halves before you build this one-of-a-kind treat. ",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2018/05/exps140280_CW143042D02_27_7b_WEB-1-696x696.jpg",
+    "price": 8,
+    "productCategoryId": 3
+  },
+  {
+    "name": "Air-Fryer Lava Cakes",
+    "description":
+      " It never ceases to amaze to see warm chocolate pudding ooze out of the center of this tender chocolate cake. These cakes are a showstopper on a plate! ",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2018/05/Peppermint-Lava-Cakes_EXPS_THCA17_227180_A6_01_5b-1-696x696.jpg",
+    "price": 15,
+    "productCategoryId": 2
+  },
+  {
+    "name": "Snowman Oreo Balls",
+    "description":
+      " Get the kids involved with making these adorable snowman Oreo balls. They can help roll, dip and decorate! ",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/0001/01/Snowman-Oreo-Balls_EXPS_FT19_246822_F_1114_1-696x696.jpg",
+    "price": 8,
+    "productCategoryId": 3
+  },
+  {
+    "name": "Cannoli Cupcakes",
+    "description":
+      " These jumbo cupcakes feature a fluffy, creamy cannoli-like filling. White chocolate curls on top are the crowning touch.",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2017/10/exps43801_HC1597097D60-1.jpg",
+    "price": 7,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Sunny Flowers",
+    "description":
+      "With tangy lemon filling, tender cake and crunchy topping, it will have you give you serious spring fever.",
+    "imageUrl":
+      "https://i0.wp.com/ediblecrafts.craftgossip.com/files/2015/08/sunflower-decorated-chocolate-cupcake.jpg?resize=600%2C550",
+    "price": 9,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Pistachios Truffles",
+    "description":
+      "Nothing compares to the melt-in-your-mouth flavor of these truffles...",
+    "imageUrl":
+      "https://theloopywhisk.com/wp-content/uploads/2018/11/Marzipan-Truffles_730px-featured-500x500.jpg",
+    "price": 5,
+    "productCategoryId": 2
+  },
+
+
+  {
+    "name": "Espresso Chocolate Chunk",
+    "description":
+      "Artisan organic espresso beans infused with our cookies and paired with our white chocolate chunks",
+    "imageUrl":
+      "https://cdn.shopify.com/s/files/1/1540/1281/products/Espresso_Chocolate_Chunk_540x.png?v=1569239786",
+    "price": 5,
+    "productCategoryId": 1
+  },
+  {
+    "name": "Tiny Raspberry Jam",
+    "description":
+      "Cookies made with the tart, sweet goodness of totally fresh raspberries",
+    "imageUrl":
+      "https://cdn.shopify.com/s/files/1/1540/1281/products/choc_jam_inside_600x600NEW_540x.png?v=1581639491",
+    "price": 10,
+    "productCategoryId": 1
+  },
+  {
+    "name": "Cherry truffle",
+    "description":
+      "Cherry, meringue, and dark chocolate are all mixed together in this amazing truffle",
+    "imageUrl":
+      "https://coffeebeanflavor.com/wp-content/uploads/2016/07/Dark-Chocolate-Cherry-Truffle.jpg",
+    "price": 7,
+    "productCategoryId": 2
+  },
+  {
+    "name": "Peach Brown",
+    "description": "Peach covered in milk chocolate",
+    "imageUrl":
+      "http://cdn.meduriworlddelights.com/images/main/Milk-Chocolate-Peach-Treasures-33008-main.jpg",
+    "price": 7,
+    "productCategoryId": 2
+  },
+  {
+    "name": "Blueberry Pop",
+    "description": "Wild Maine Blueberries mixed in this delicious cake pop",
+    "imageUrl":
+      "https://www.readersdigest.ca/wp-content/uploads/sites/14/2016/08/wild-blueberry-cake-pops-1024x696.jpg",
+    "price": 6,
+    "productCategoryId": 3
+  },
+  {
+    "name": "Just chocolate'",
+    "description": "Chocolate cake pop covered in dark chocolate frosting",
+    "imageUrl":
+      "https://www.sugarsweet.ca/uploads/1/2/9/2/129270739/s305153677804097004_p24_i2_w720.jpeg",
+    "price": 10,
+    "productCategoryId": 3
+  },
+  {
+    "name": "Triple Chocolate",
+    "description":
+      "A blend of dark chocolate, milk chocolate, and dark Belgian cocoa- a chocolate lover’s dream come true!",
+    "imageUrl":
+      "https://cdn.shopify.com/s/files/1/1540/1281/products/TripleChocolateLavaCookie_New_1080x.png?v=1588009518",
+    "price": 3,
+    "productCategoryId": 1
+  },
+  {
+    "name": "Sea Salt Chocolate Chunk",
+    "description":
+      "A blend of organic dark and milk chocolate and a touch of sea salt attained from the coastal areas of France.",
+    "imageUrl":
+      "https://cdn.shopify.com/s/files/1/1540/1281/products/Sea-Salt-Chocolate-Chunk_a7ddd218-7328-47af-8d84-6aa4e4ed6498_540x.png?v=1527429042",
+    "price": 4,
+    "productCategoryId": 1
+  },
+  {
+    "name": "Pecan Pie Chocolate",
+    "description":
+      "Shortbread cookie with roasted pecans and sea salt caramels, coated in milk chocolate on the bottom.",
+    "imageUrl":
+      "https://cdn.shopify.com/s/files/1/1110/4668/products/pecan-pie_1024x1024@2x.jpg?v=1559574083",
+    "price": 5,
+    "productCategoryId": 2
+  },
+  {
+    "name": "Salted Caramel Cupcake",
+    "description":
+      "Dulce de Leche cake with Swirls of salted caramel buttercream (sea salt).",
+    "imageUrl":
+      "https://www.buttercupbakeshop.com/wp-content/uploads/2017/06/Salted-Caramel.jpg",
+    "price": 7,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Kitchen Sink",
+    "description":
+      "Crisp organic toffee, crunchy organic pretzels, rich organic chocolate makes your mouth say, yes please!",
+    "imageUrl":
+      "https://cdn.shopify.com/s/files/1/1540/1281/products/kitchen_sink_fullsize_600x600_cf40a902-23ba-4e60-b771-65b7f0ea6f03_540x.png?v=1569315839",
+    "price": 4,
+    "productCategoryId": 1
+  },
+  {
+    "name": "Hazelnut Chocolate Truffles",
+    "description": "Who doesn't love a good hazelnut and chocolate combo?",
+    "imageUrl":
+      "https://149366112.v2.pressablecdn.com/wp-content/uploads/2016/03/hazelnut-chocolate-truffle-eggs.jpg",
+    "price": 10,
+    "productCategoryId": 2
+  },
+  {
+    "name": "Rocky Road Peanut Chip",
+    "description": "Yes, it's super chocolatey, peanutty, and marshmallowy",
+    "imageUrl":
+      "https://cdn.shopify.com/s/files/1/1540/1281/products/RockyRoad_New_540x.png?v=1576703986",
+    "price": 3,
+    "productCategoryId": 1
+  },
+  {
+    "name": "Betterfinger",
+    "description":
+      "2 pieces of crispy peanut butter core dipped in milk chocolate.",
+    "imageUrl":
+      "https://cdn.shopify.com/s/files/1/1110/4668/products/candy-bar_better-finger_1024x1024@2x.jpg?v=1585104647",
+    "price": 9,
+    "productCategoryId": 2
+  },
+  {
+    "name": "Galaxy Cake Pops",
+    "description": "They're out of this world good",
+    "imageUrl":
+      "https://i.pinimg.com/564x/e4/23/b5/e423b511a97965876c018de401d68adb.jpg",
+    "price": 8,
+    "productCategoryId": 3
+  },
+  {
+    "name": "Dark Chocolate Cupcake W/ Peanut Butter",
+    "description":
+      "Dark choc cake with Reese’s PB cups inside and PB icing. For all you peanut butter freaks out there.",
+    "imageUrl":
+      "https://www.buttercupbakeshop.com/wp-content/uploads/2017/04/Dark-Choc-Peanut-Butter-Cupcake.jpg",
+    "price": 3,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Ube Cupcake",
+    "description":
+      "A vanilla cocoa cupcake frosted with cream cheese frosting.",
+    "imageUrl":
+      "https://www.buttercupbakeshop.com/wp-content/uploads/2016/11/Ube-Cupcake.jpg",
+    "price": 8,
+    "productCategoryId": 4
+  },
+  {
+    "name": "Cookies’n’Cream Cupcake",
+    "description":
+      "Vanilla cake stuffed with a whole Oreo (yes a whole one) topped with an Oreo crumb buttercream.",
+    "imageUrl":
+      "https://www.buttercupbakeshop.com/wp-content/uploads/2017/06/CookiesnCream-Cupcake.jpg",
+    "price": 9,
+    "productCategoryId": 4
+  }
+]

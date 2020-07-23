@@ -1,0 +1,23 @@
+{
+  "config": {
+    "locale": "en"
+  },
+  "model": {
+    "name": {
+      "type": "faker",
+      "value": "lorem.word"
+    },
+    "description": {
+      "type": "faker",
+      "value": "lorem.sentence"
+    },
+    "price": {
+      "type": "randomNumberBetween",
+      "value": [3, 10]
+    },
+    "productCategoryId": {
+      "type": "randomNumberBetween",
+      "value": [1, 4]
+    }
+  }
+}
