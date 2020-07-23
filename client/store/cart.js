@@ -60,6 +60,7 @@ export const fetchCart = () => async dispatch => {
 export const addToCart = (userId, orderProduct) => {
   return async dispatch => {
     const {data} = await axios.post(`/api/order`, {userId, orderProduct})
+    console.log("DATA", data)
     if (Array.isArray(data)) {
       dispatch(addedToCart(data[0], orderProduct))
     } else {

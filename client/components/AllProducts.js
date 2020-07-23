@@ -4,10 +4,32 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {fetchProducts, removeAProduct} from '../store/products'
 import AddProductForm from './AddProductForm'
+import {addToCart} from '../store/cart'
+import ls from 'local-storage'
 
 export class AllProducts extends React.Component {
+  constructor(){
+    super()
+    this.handleClick = this.handleClick.bind(this)
+  }
+
   componentDidMount() {
     this.props.getAllProducts()
+  }
+
+  async handleClick(e, product) {
+    const orderproduct = product
+    console.log("this.state.userid=>", this.state)
+    console.log("this.props.userid=>", this.props)
+    const userId = this.props.user.id
+    console.log("this.props=>", this.props)
+    await this.props.addToCart(userId, orderproduct)
+    let updatedProduct = {
+      [this.state.name]: this.props.singleProduct,
+      quantity: this.state.qty
+    }
+    ls.set(`${this.state.name}`, updatedProduct)
+    alert('Added to cart')
   }
 
   handleRemove(productId) {
@@ -35,10 +57,10 @@ export class AllProducts extends React.Component {
 
                     <h4 className="product-price">{product.price}</h4>
                     </Link>
-                    <button type="button" className="prodBtn">Add to Cart</button>
+                    <button type="submit" className="prodBtn" onClick={e => this.handleClick(e, product)}>Add to Cart</button>
                     {isAdmin ? (
                       <button
-                        className="button"
+                        className="prodBtn admin"
                         type="button"
                         onClick={() => this.handleRemove(product.id)}
                         width="100px"
@@ -71,7 +93,9 @@ const mapState = state => {
 const mapDispatch = dispatch => {
   return {
     getAllProducts: () => dispatch(fetchProducts()),
-    removeProduct: productId => dispatch(removeAProduct(productId))
+    removeProduct: productId => dispatch(removeAProduct(productId)),
+    addToCart: (userId, orderProduct) =>
+      dispatch(addToCart(userId, orderProduct))
   }
 }
 

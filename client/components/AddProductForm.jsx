@@ -45,7 +45,7 @@ export class AddProductForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="newProd">
         <h3 className="header">Add A New Product</h3>
         <form onSubmit={e => this.handleSubmit(e)} className="form">
           <label htmlFor="name"> Name: </label>

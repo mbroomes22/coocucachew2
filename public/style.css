@@ -26,8 +26,13 @@ a {
 .form {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
+  margin: 2%;
+  width: 25%;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .login-field {
@@ -99,6 +104,14 @@ form div {
 .prodBtn:hover {
   background: #B8CFF9;
   color: #000;
+}
+
+.admin {
+  background: rgb(240, 47, 105);
+}
+
+.admin:hover {
+  background: rgb(240, 156, 181);
 }
 
 .buttonC {
@@ -206,7 +219,7 @@ form div {
 
 .product-field {
   padding: 0.42857em;
-  width: 20%;
+  width: 60%;
   box-sizing: border-box;
   justify-content: center;
   margin: 1%;
@@ -288,11 +301,9 @@ form div {
   padding: 1rem;
 }
 
-.form {
-  margin: 2%;
+.newProd {
+  margin-bottom: 4%;
 }
-
-
 
 .all-product-container {
   font-family: 'Comic Sans MS', cursive, sans-serif;

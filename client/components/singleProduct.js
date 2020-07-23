@@ -39,7 +39,8 @@ export class SingleProduct extends Component {
   async handleClick(product) {
     const orderproduct = this.props.singleProduct
     const userId = this.props.user.id
-
+    console.log("this.state.userid=>", this.state)
+    console.log("this.props.userid=>", userId)
     await this.props.addToCart(userId, orderproduct)
     let updatedProduct = {
       [this.state.name]: this.props.singleProduct,
@@ -118,6 +119,7 @@ export class SingleProduct extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log("this.state.userid=>", state)
   return {
     singleProduct: state.products,
     cart: state.cart,

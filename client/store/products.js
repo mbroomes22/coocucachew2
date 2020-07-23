@@ -7,7 +7,9 @@ const ADD_PRODUCT = 'ADD_PRODUCT'
 const DELETE_PRODUCT = 'DELETE_PRODUCT'
 
 //initial state
-const initialProducts = {}
+const initialProducts = {
+  sweetproducts: []
+}
 
 //action creator
 const gotAProduct = product => ({
@@ -25,9 +27,9 @@ const addedProduct = products => ({
   products
 })
 
-const deletedProduct = products => ({
+const deletedProduct = deleted => ({
   type: DELETE_PRODUCT,
-  products
+  deleted
 })
 
 //thunk
@@ -58,10 +60,11 @@ export const addNewProduct = productInfo => async dispatch => {
   }
 }
 
-export const removeAProduct = productId => async dispatch => {
+export const removeAProduct = removeId => async dispatch => {
   try {
-    const res = await axios.delete(`/api/products/${productId}`)
-    dispatch(deletedProduct(res.data))
+    await axios.delete(`/api/products/${removeId}`)
+    console.log("DATA=>", removeId)
+    dispatch(deletedProduct(removeId))
   } catch (error) {
     console.error(error)
   }
@@ -80,7 +83,10 @@ export default function productsReducer(state = initialProducts, action) {
       return action.products
 
     case DELETE_PRODUCT:
-      return action.products
+      console.log("redux state", state)
+      console.log("action.product", action.deleted)
+      console.log("filtered state =>", state.filter(prod => prod.id !== action.deleted))
+      return {...state.filter(prod => prod.id !== action.deleted)}
 
     default:
       return state
