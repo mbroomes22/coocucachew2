@@ -54,7 +54,7 @@ export class ConfirmOrder extends Component {
       item => (total += item.price.slice(1) * item.orderProduct.quantity)
     )
     return (
-      <div>
+      <div className="center">
         <br />
         <button type="submit" onClick={this.goBack} className="buttonC">
           Return to Payment Details
@@ -131,7 +131,7 @@ export class ConfirmOrder extends Component {
           type="submit"
           onClick={this.continue}
           onSubmit={this.handleSubmit}
-          className="buttonC"
+          className="buttonC checkout"
         >
           Confirm & Checkout
         </button>

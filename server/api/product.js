@@ -12,11 +12,24 @@ router.get('/', async (req, res, next) => {
 })
 
 router.get('/:productId', async (req, res, next) => {
+  console.log("req.params", req)
   try {
     const singleProduct = await Product.findOne({
       where: {id: req.params.productId}
     })
     res.json(singleProduct)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.get('/:productCategoryId', async (req, res, next) => {
+  console.log("req.params", req.params)
+  try {
+    const singleGenre = await Product.findAll({
+      where: {productCategoryId: req.params.productId}
+    })
+    res.json(singleGenre)
   } catch (err) {
     next(err)
   }
@@ -33,17 +46,6 @@ router.post('/', isAdmin, async (req, res, next) => {
 })
 
 router.put('/:productId', isAdmin, async (req, res, next) => {
-  // try {
-  //   const updatedProduct = await Product.update(req.body, {
-  //     where: {
-  //       id: req.params.productId
-  //     }
-  //   })
-  //   res.status(201).json(updatedProduct)
-  // } catch (err) {
-  //   next(err)
-  // }
-
   try {
     const updatedProduct = await Product.findOne({
       where: {

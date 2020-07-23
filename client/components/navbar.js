@@ -13,7 +13,15 @@ const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
           <div className="nav-items">
           <div className="left-nav">
           <Link to="/home">Home</Link>
-          <Link to="/products">All Products</Link>
+          <div className="dropdown">
+          <Link to="/products" className="dropbtn">All Products <i className="fa fa-caret-down"></i></Link>
+            <div className="dropdown-content">
+            <Link to="/products/cookies">Cookies</Link>
+            <Link to="/products/chocolates">Chocolates</Link>
+            <Link to="/products/cakepops">Cakepops</Link>
+            <Link to="/products/cupcakes">Cupcakes</Link>
+            </div>
+          </div>
           </div>
           <div className="mid-nav">
           <h1>Coocucachew</h1>

@@ -9,6 +9,10 @@ import CartQuantity from './components/cart/cartQuantity'
 import UserForm from './components/Checkout/userForm'
 import AllUsers from './components/Admin/users'
 import {Login, Signup, UserHome, SingleProduct, AllProducts} from './components'
+import Cookies from './components/Genres/cookies'
+import Cakepops from './components/Genres/cakepops'
+import Chocolates from './components/Genres/chocolates'
+import Cupcakes from './components/Genres/cupcakes'
 import {me} from './store'
 
 /**
@@ -31,6 +35,10 @@ class Routes extends Component {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/" component={AllProducts} />
           <Route exact path="/products" component={AllProducts} />
+          <Route exact path="/products/cookies" component={Cookies} />
+          <Route exact path="/products/chocolates" component={Chocolates} />
+          <Route exact path="/products/cakepops" component={Cakepops} />
+          <Route exact path="/products/cupcakes" component={Cupcakes} />
           <Route exact path="/products/:productId" component={SingleProduct} />
           <Route exact path="/cart/checkout" component={UserForm} />
           <Route exact path="/cart" component={CartMain} />
