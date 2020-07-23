@@ -23,8 +23,7 @@ const Product = db.define('product', {
   },
   imageUrl: {
     type: Sequelize.TEXT,
-    defaultValue:
-      'candy-set-sweet-desserts-chocolate-candies-vector-26628401.jpg'
+    defaultValue:'candy-set-sweet-desserts-chocolate-candies-vector-26628401.jpg'
   },
   description: {
     type: Sequelize.TEXT,

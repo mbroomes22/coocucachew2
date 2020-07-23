@@ -33,15 +33,29 @@ router.post('/', isAdmin, async (req, res, next) => {
 })
 
 router.put('/:productId', isAdmin, async (req, res, next) => {
+  // try {
+  //   const updatedProduct = await Product.update(req.body, {
+  //     where: {
+  //       id: req.params.productId
+  //     }
+  //   })
+  //   res.status(201).json(updatedProduct)
+  // } catch (err) {
+  //   next(err)
+  // }
+
   try {
-    const updatedProduct = await Product.update(req.body, {
+    const updatedProduct = await Product.findOne({
       where: {
         id: req.params.productId
       }
     })
-    res.status(201).json(updatedProduct)
-  } catch (err) {
-    next(err)
+    console.log('express req.params=>', req.params)
+    console.log('express req.body=>', req.body)
+    const updateProduct = await updatedProduct.update(req.body)
+    res.json(updateProduct)
+  } catch (error) {
+    next(error)
   }
 })
 

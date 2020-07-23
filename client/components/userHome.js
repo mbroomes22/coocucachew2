@@ -22,8 +22,9 @@ export const UserHome = props => {
             <div className="card">
               <Link to="/products">
                 <img
-                  src="https://cmsassets.mybluprint.com/dims4/default/af5fa3f/2147483647/strip/true/crop/710x424+0+143/resize/1440x860!/format/webp/quality/90/?url=https%3A%2F%2Fcmsassets.mybluprint.com%2F25%2F6c%2Ff406fc275e54ca619859cea0a3f8%2Fhowtomakecakepops-cakepopswithsprinkles-krisgaliciabrown.jpg"
+                  src="https://cdn.shopify.com/s/files/1/1354/8045/products/cakepops_large.jpg?v=1469295321"
                   height="200px"
+                  className="all-prod-img"
                 />
                 <h3>Explore our Cakepops</h3>
               </Link>
@@ -31,8 +32,9 @@ export const UserHome = props => {
             <div className="card">
               <Link to="/products">
                 <img
-                  src="https://bakerbynature.com/wp-content/uploads/2017/04/untitled-51-of-68-2.jpg"
+                  src="https://www.tasteofhome.com/wp-content/uploads/2019/12/Oreo-Cupcakes-with-Cookies-and-Cream-Frosting_EXPS_FT19_247265_F_1203_1-696x696.jpg"
                   width="200px"
+                  className="all-prod-img"
                 />
                 <h3>See more Cupcakes</h3>
               </Link>
@@ -40,8 +42,9 @@ export const UserHome = props => {
             <div className="card">
               <Link to="/products">
                 <img
-                  src="https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_5184/https://www.thebakingchocolatess.com/wp-content/uploads/2015/06/2015-06-08-23.46.09.jpg"
+                  src="https://www.texanerin.com/content/uploads/2019/09/paleo-chocolate-chip-cookies-8fi2.jpg"
                   height="200px"
+                  className="all-prod-img"
                 />
                 <h3>Explore our Cookies</h3>
               </Link>
@@ -49,8 +52,9 @@ export const UserHome = props => {
             <div className="card">
               <Link to="/products">
                 <img
-                  src="https://i.pinimg.com/564x/0a/e8/ff/0ae8ff11e7f4d00b077e6125f724816a.jpg"
+                  src="choc.png"
                   width="200px"
+                  className="all-prod-img"
                 />
                 <h3>See our Chocolates</h3>
               </Link>

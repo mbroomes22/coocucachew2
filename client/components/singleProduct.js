@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {getAProduct} from '../store/products'
 import {addToCart} from '../store/cart'
+import EditProductForm from './EditProductForm'
 import ls from 'local-storage'
 //need import
 
@@ -74,6 +75,8 @@ export class SingleProduct extends Component {
 
   render() {
     const singleProduct = this.props.singleProduct
+    const isAdmin = this.props.user.isAdmin
+
     return (
       <div className="singleProduct_page">
         <div className="header" key={singleProduct.id}>
@@ -87,19 +90,16 @@ export class SingleProduct extends Component {
           </div>
           </div>
           <div className="right-box">
+
           <div className="product-description">
             <p>{singleProduct.description}</p>
           </div>
+
           <div className="singleProduct_price">
             <p className="product-price">{singleProduct.price}</p>
           </div>
 
         <div className="quantity_change">
-          {/* <form onSubmit={(event) => this.handleSubmit(event)}>
-            <button onClick={this.Decreament}>-</button>
-            <div id="selectedQty">{this.state.qty}</div>
-            <button onClick={this.Increament}>+</button>
-          </form> */}
           <button
             className="buttonC"
             type="submit"
@@ -110,6 +110,13 @@ export class SingleProduct extends Component {
             add to cart
           </button>
         </div>
+
+        {isAdmin ? (
+          <div>
+            <EditProductForm props={this.props} />
+          </div>
+        ) : null}
+
         </div>
         </div>
         {/* end of product details */}
@@ -119,7 +126,7 @@ export class SingleProduct extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log("this.state.userid=>", state)
+
   return {
     singleProduct: state.products,
     cart: state.cart,

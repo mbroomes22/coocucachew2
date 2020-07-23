@@ -19,16 +19,13 @@ export class AllProducts extends React.Component {
 
   async handleClick(e, product) {
     const orderproduct = product
-    console.log("this.state.userid=>", this.state)
-    console.log("this.props.userid=>", this.props)
     const userId = this.props.user.id
-    console.log("this.props=>", this.props)
     await this.props.addToCart(userId, orderproduct)
     let updatedProduct = {
-      [this.state.name]: this.props.singleProduct,
-      quantity: this.state.qty
+      [product.name]: product,
+      quantity: 1
     }
-    ls.set(`${this.state.name}`, updatedProduct)
+    ls.set(`${product.name}`, updatedProduct)
     alert('Added to cart')
   }
 

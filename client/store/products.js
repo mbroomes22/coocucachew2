@@ -4,6 +4,7 @@ import axios from 'axios'
 const GET_PRODUCTS = 'GET_PRODUCTS'
 const GET_A_PRODUCT = 'GET_A_PRODUCT'
 const ADD_PRODUCT = 'ADD_PRODUCT'
+const EDIT_PRODUCT = 'EDIT_PRODUCT'
 const DELETE_PRODUCT = 'DELETE_PRODUCT'
 
 //initial state
@@ -24,6 +25,11 @@ const getProducts = products => ({
 
 const addedProduct = products => ({
   type: ADD_PRODUCT,
+  products
+})
+
+const editedProduct = products => ({
+  type: EDIT_PRODUCT,
   products
 })
 
@@ -60,6 +66,15 @@ export const addNewProduct = productInfo => async dispatch => {
   }
 }
 
+export const editProduct = (prodId, productInfo) => async dispatch => {
+  try {
+    const res = await axios.put(`/api/products/${prodId}`, productInfo)
+    dispatch(editedProduct(res.data))
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 export const removeAProduct = removeId => async dispatch => {
   try {
     await axios.delete(`/api/products/${removeId}`)
@@ -71,7 +86,7 @@ export const removeAProduct = removeId => async dispatch => {
 }
 
 //reducer
-export default function productsReducer(state = initialProducts, action) {
+export default function productsReducer(state = [], action) {
   switch (action.type) {
     case GET_A_PRODUCT:
       return action.product
@@ -82,11 +97,14 @@ export default function productsReducer(state = initialProducts, action) {
     case ADD_PRODUCT:
       return action.products
 
+    case EDIT_PRODUCT:
+      return action.products
+
     case DELETE_PRODUCT:
       console.log("redux state", state)
       console.log("action.product", action.deleted)
       console.log("filtered state =>", state.filter(prod => prod.id !== action.deleted))
-      return {...state.filter(prod => prod.id !== action.deleted)}
+      return [...state].filter(prod => prod.id !== action.deleted)
 
     default:
       return state
