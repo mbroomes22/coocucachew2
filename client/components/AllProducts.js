@@ -10,6 +10,9 @@ import ls from 'local-storage'
 export class AllProducts extends React.Component {
   constructor(){
     super()
+    this.state= {
+      value: 20
+    }
     this.handleClick = this.handleClick.bind(this)
   }
 
@@ -33,12 +36,16 @@ export class AllProducts extends React.Component {
     this.props.removeProduct(productId)
   }
 
+  handleChange = (evt) => {
+    this.setState({value: evt.target.value})
+  }
+
   render() {
     const {products} = this.props
     const isAdmin = this.props.user.isAdmin
-    console.log("products", products)
-    const cupcakes = products[0] && products.filter(prod => prod.productCategoryId === 4)
-    console.log("cupcakes", cupcakes)
+    // console.log('value', this.state.value)
+    const affordable = products[0] && products.map(item => item.price.replace('$', '')).filter(price => price => this.state.value)
+    // console.log('affordable', affordable)
 
     return (
       <div>
@@ -46,9 +53,9 @@ export class AllProducts extends React.Component {
           <h2>Products</h2>
         </div>
 
-        {/* <div className="tags">
-          Filter By: <Tags />
-        </div> */}
+        <div className="slidecontainer">
+          <input type="range" min="1" max="20" value="20" className="slider" id="myRange" onChange={this.handleChange} />
+        </div>
 
         <div className="card-container">
           {this.props.products[0]
