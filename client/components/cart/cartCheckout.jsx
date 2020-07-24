@@ -31,6 +31,7 @@ export class CartCheckout extends React.Component {
   }
 
   render() {
+    console.log("ls.products cart chkout=>", ls.products)
     return (
       <div>
         {this.props.cart[0].products ? (

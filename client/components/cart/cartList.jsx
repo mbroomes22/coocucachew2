@@ -56,6 +56,10 @@ export class CartList extends React.Component {
     })
   }
 
+  loadProducts = () => {
+
+  }
+
   render() {
     this.setPropsToLocalStorage()
     const {step} = this.state
@@ -71,7 +75,7 @@ export class CartList extends React.Component {
             orderId={this.props.cartId}
           />
         ) : (
-          'Loading Products'
+          'Your cart is empty.'
         )
       case 2:
         return <UserForm cart={this.props.cart} nextStep={this.nextStep} />

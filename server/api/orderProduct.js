@@ -19,7 +19,7 @@ router.put('/:orderId', async (req, res, next) => {
   const {quantity, productId, orderId} = req.body
   try {
     // console.log('INSIDE THE UPDATE PRODUCT WORKS', orderId, productId, quantity)
-    if (req.session.passport.user) {
+    if (req.session.passport) {
       const productToUpdate = await OrderProduct.findOne({
         where: {
           orderId: req.params.orderId,
@@ -75,7 +75,7 @@ router.put('/:orderId', async (req, res, next) => {
 
 router.delete('/:orderId', async (req, res, next) => {
   try {
-    if (req.session.passport.user) {
+    if (req.session.passport) {
       console.log(
         'ORDER ID',
         req.params.orderId,

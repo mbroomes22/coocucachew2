@@ -7,7 +7,7 @@ const {Product, User, OrderProduct, Order} = require('../db/models')
 //authhelpers.js
 router.get('/', async (req, res, next) => {
   try {
-    if (req.session.passport.user) {
+    if (req.session.passport) {
       const fetchedOrder = await Order.findOrCreate({
         where: {
           userId: req.session.passport.user,
@@ -18,10 +18,12 @@ router.get('/', async (req, res, next) => {
       console.log('--->  FETCHED OR CREATED AN ORDER W A USER  <---')
       res.json(fetchedOrder)
     } else {
-      const fetchedOrder = await Order.create({
+      const fetchedOrder = await Order.findOrCreate({
+        where: {
         isPending: true,
         userId: null
-      })
+      }, include: Product})
+      console.log('--->  CREATED AN ORDER W/O A USER  <---')
       console.log('--->  CREATED AN ORDER W/O A USER  <---')
       res.json(fetchedOrder)
     }
