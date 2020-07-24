@@ -12,24 +12,11 @@ router.get('/', async (req, res, next) => {
 })
 
 router.get('/:productId', async (req, res, next) => {
-  console.log("req.params", req)
   try {
     const singleProduct = await Product.findOne({
       where: {id: req.params.productId}
     })
     res.json(singleProduct)
-  } catch (err) {
-    next(err)
-  }
-})
-
-router.get('/:productCategoryId', async (req, res, next) => {
-  console.log("req.params", req.params)
-  try {
-    const singleGenre = await Product.findAll({
-      where: {productCategoryId: req.params.productId}
-    })
-    res.json(singleGenre)
   } catch (err) {
     next(err)
   }

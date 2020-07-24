@@ -2,10 +2,10 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {fetchChocolates} from '../../store/sweets'
 import AddProductForm from '../AddProductForm'
 import {addToCart} from '../../store/cart'
 import ls from 'local-storage'
+import { fetchProducts } from '../../store/products'
 
 export class Chocolates extends React.Component {
   constructor(){
@@ -31,15 +31,16 @@ export class Chocolates extends React.Component {
 
   render() {
     const {products} = this.props
+    const chocolates = products[0] && products.filter(prod => prod.productCategoryId === 2)
 
     return (
       <div>
-        <div className="main-img">
-          <h2>Products</h2>
+        <div className="main-img chocolate-img">
+          <h2>Chocolates</h2>
         </div>
         <div className="card-container">
-          {this.props.products[0]
-            ? products.map(product => {
+          {chocolates
+            ? chocolates.map(product => {
                 return (
                   <div key={product.id} className="card">
                     <Link to={`/products/${product.id}`}>
@@ -53,7 +54,7 @@ export class Chocolates extends React.Component {
                   </div>
                 )
               })
-            : 'loading....'}
+            : 'Sorry, there are currently no chocolates available. Be sure to check back soon!'}
         </div>
       </div>
     )
@@ -69,7 +70,7 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getAllChocolates: () => dispatch(fetchChocolates())
+    getAllChocolates: () => dispatch(fetchProducts())
   }
 }
 

@@ -2,10 +2,10 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {fetchCookies} from '../../store/sweets'
 import AddProductForm from '../AddProductForm'
 import {addToCart} from '../../store/cart'
 import ls from 'local-storage'
+import { fetchProducts } from '../../store/products'
 
 export class Cookies extends React.Component {
   constructor(){
@@ -31,15 +31,16 @@ export class Cookies extends React.Component {
 
   render() {
     const {products} = this.props
+    const cookies = products[0] && products.filter(prod => prod.productCategoryId === 1)
 
     return (
       <div>
-        <div className="main-img">
-          <h2>Products</h2>
+        <div className="main-img cookie-img">
+          <h2>Cookies</h2>
         </div>
         <div className="card-container">
-          {this.props.products[0]
-            ? products.map(product => {
+          {cookies
+            ? cookies.map(product => {
                 return (
                   <div key={product.id} className="card">
                     <Link to={`/products/${product.id}`}>
@@ -54,7 +55,7 @@ export class Cookies extends React.Component {
                   </div>
                 )
               })
-            : 'loading....'}
+            : 'Sorry, there are currently no cookies available. Be sure to check back soon!'}
         </div>
       </div>
     )
@@ -70,7 +71,7 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getAllCookies: () => dispatch(fetchCookies()),
+    getAllCookies: () => dispatch(fetchProducts()),
   }
 }
 

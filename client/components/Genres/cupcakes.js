@@ -2,8 +2,7 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {fetchCupcakes} from '../../store/sweets'
-import AddProductForm from '../AddProductForm'
+import {fetchProducts} from '../../store/products'
 import {addToCart} from '../../store/cart'
 import ls from 'local-storage'
 
@@ -14,7 +13,7 @@ export class Cupcakes extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getAllCupcakes()
+    this.props.getAllSweets()
   }
 
   async handleClick(e, product) {
@@ -31,15 +30,16 @@ export class Cupcakes extends React.Component {
 
   render() {
     const {products} = this.props
+    const cupcakes = products[0] && products.filter(prod => prod.productCategoryId === 4)
 
     return (
       <div>
-        <div className="main-img">
-          <h2>Products</h2>
+        <div className="main-img cupcake-img">
+          <h2>Cupcakes</h2>
         </div>
         <div className="card-container">
-          {this.props.products[0]
-            ? products.map(product => {
+          {cupcakes ?
+             cupcakes.map(product => {
                 return (
                   <div key={product.id} className="card">
                     <Link to={`/products/${product.id}`}>
@@ -53,7 +53,7 @@ export class Cupcakes extends React.Component {
                   </div>
                 )
               })
-            : 'loading....'}
+            : 'Sorry, there are currently no cupcakes available. Be sure to check back soon!'}
         </div>
       </div>
     )
@@ -69,7 +69,7 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getAllCupcakes: () => dispatch(fetchCupcakes())
+    getAllSweets: () => dispatch(fetchProducts())
   }
 }
 

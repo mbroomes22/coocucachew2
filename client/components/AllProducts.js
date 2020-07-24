@@ -36,12 +36,20 @@ export class AllProducts extends React.Component {
   render() {
     const {products} = this.props
     const isAdmin = this.props.user.isAdmin
+    console.log("products", products)
+    const cupcakes = products[0] && products.filter(prod => prod.productCategoryId === 4)
+    console.log("cupcakes", cupcakes)
 
     return (
       <div>
         <div className="main-img">
           <h2>Products</h2>
         </div>
+
+        {/* <div className="tags">
+          Filter By: <Tags />
+        </div> */}
+
         <div className="card-container">
           {this.props.products[0]
             ? products.map(product => {

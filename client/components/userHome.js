@@ -20,7 +20,7 @@ export const UserHome = props => {
           <br />
           <div className="card-container">
             <div className="card">
-              <Link to="/products">
+              <Link to="/products/cakepops">
                 <img
                   src="https://cdn.shopify.com/s/files/1/1354/8045/products/cakepops_large.jpg?v=1469295321"
                   height="200px"
@@ -30,7 +30,7 @@ export const UserHome = props => {
               </Link>
             </div>
             <div className="card">
-              <Link to="/products">
+              <Link to="/products/cupcakes">
                 <img
                   src="https://www.tasteofhome.com/wp-content/uploads/2019/12/Oreo-Cupcakes-with-Cookies-and-Cream-Frosting_EXPS_FT19_247265_F_1203_1-696x696.jpg"
                   width="200px"
@@ -40,7 +40,7 @@ export const UserHome = props => {
               </Link>
             </div>
             <div className="card">
-              <Link to="/products">
+              <Link to="/products/cookies">
                 <img
                   src="https://www.texanerin.com/content/uploads/2019/09/paleo-chocolate-chip-cookies-8fi2.jpg"
                   height="200px"
@@ -50,7 +50,7 @@ export const UserHome = props => {
               </Link>
             </div>
             <div className="card">
-              <Link to="/products">
+              <Link to="/products/chocolates">
                 <img
                   src="choc.png"
                   width="200px"

@@ -473,3 +473,23 @@ form div {
   align-content: center;
   margin-bottom: 5%;
 }
+
+.cupcake-img {
+  background: url("cupcakes.png") no-repeat center center fixed;
+  color: black;
+}
+
+.cookie-img {
+  background: url("cookies.png") no-repeat center center fixed;
+  color: black;
+}
+
+.chocolate-img {
+  background: url("chocolates.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.cakepop-img {
+  background: url("cakepops.png") no-repeat center center fixed;
+  background-size: cover;
+}

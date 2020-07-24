@@ -2,10 +2,10 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {fetchCakepops} from '../../store/sweets'
 import AddProductForm from '../AddProductForm'
 import {addToCart} from '../../store/cart'
 import ls from 'local-storage'
+import { fetchProducts } from '../../store/products'
 
 export class Cakepops extends React.Component {
   constructor(){
@@ -31,15 +31,16 @@ export class Cakepops extends React.Component {
 
   render() {
     const {products} = this.props
+    const cakepops = products[0] && products.filter(prod => prod.productCategoryId === 3)
 
     return (
       <div>
-        <div className="main-img">
-          <h2>Products</h2>
+        <div className="main-img cakepop-img">
+          <h2>Cakepops</h2>
         </div>
         <div className="card-container">
-          {this.props.products[0]
-            ? products.map(product => {
+          {cakepops
+            ? cakepops.map(product => {
                 return (
                   <div key={product.id} className="card">
                     <Link to={`/products/${product.id}`}>
@@ -53,7 +54,7 @@ export class Cakepops extends React.Component {
                   </div>
                 )
               })
-            : 'loading....'}
+            : 'Sorry, there are currently no cakepops available. Be sure to check back soon!'}
         </div>
       </div>
     )
@@ -69,7 +70,7 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getAllCakepops: () => dispatch(fetchCakepops())
+    getAllCakepops: () => dispatch(fetchProducts())
   }
 }
 
