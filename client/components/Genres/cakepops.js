@@ -70,7 +70,9 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getAllCakepops: () => dispatch(fetchProducts())
+    getAllCakepops: () => dispatch(fetchProducts()),
+    addToCart: (userId, orderProduct) =>
+      dispatch(addToCart(userId, orderProduct))
   }
 }
 

@@ -72,6 +72,8 @@ const mapState = state => {
 const mapDispatch = dispatch => {
   return {
     getAllCookies: () => dispatch(fetchProducts()),
+    addToCart: (userId, orderProduct) =>
+      dispatch(addToCart(userId, orderProduct))
   }
 }
 
