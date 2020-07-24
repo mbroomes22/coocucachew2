@@ -53,13 +53,25 @@ export class AllProducts extends React.Component {
           <h2>Products</h2>
         </div>
 
+        <div className="filteredRes">
         <div className="slidecontainer">
+          <h3>Set your budget!</h3>
           <input type="range" min="1" max="20" value="20" className="slider" id="myRange" onChange={this.handleChange} />
           <p>Price Range: Less than ${this.state.value}</p>
         </div>
 
+        <div className="slidecontainer">
+          <h3>Search by tag:</h3>
+          <button type="button" className="buttonC">chocolate</button>{' '}
+          <button type="button" className="buttonC">frosting</button>{' '}
+          <button type="button" className="buttonC">nuts</button>{' '}
+          <button type="button" className="buttonC">fruits</button>{' '}
+          <button type="button" className="buttonC">salted</button>{' '}
+        </div>
+
         <div>
           <p>{products[0] ? affordItems.length : 0} results found</p>
+        </div>
         </div>
 
         <div className="card-container">
