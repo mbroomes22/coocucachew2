@@ -42,7 +42,7 @@
       "Platz occupies the sweet spot between cake and pie in a cupcake",
     "imageUrl":
       "https://cincyshopper.com/wp-content/uploads/2015/07/Apple-Pie-Cupcakes-2.jpg",
-    "price": 3,
+    "price": 12,
     "productCategoryId": 4
   },
   {
@@ -231,7 +231,7 @@
     "description": "Peach covered in milk chocolate",
     "imageUrl":
       "http://cdn.meduriworlddelights.com/images/main/Milk-Chocolate-Peach-Treasures-33008-main.jpg",
-    "price": 7,
+    "price": 12,
     "productCategoryId": 2
   },
   {
@@ -300,7 +300,7 @@
     "description": "Who doesn't love a good hazelnut and chocolate combo?",
     "imageUrl":
       "https://149366112.v2.pressablecdn.com/wp-content/uploads/2016/03/hazelnut-chocolate-truffle-eggs.jpg",
-    "price": 10,
+    "price": 12,
     "productCategoryId": 2
   },
   {
@@ -343,7 +343,7 @@
       "A vanilla cocoa cupcake frosted with cream cheese frosting.",
     "imageUrl":
       "https://www.buttercupbakeshop.com/wp-content/uploads/2016/11/Ube-Cupcake.jpg",
-    "price": 8,
+    "price": 12,
     "productCategoryId": 4
   },
   {

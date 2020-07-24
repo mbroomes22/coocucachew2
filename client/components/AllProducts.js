@@ -43,9 +43,9 @@ export class AllProducts extends React.Component {
   render() {
     const {products} = this.props
     const isAdmin = this.props.user.isAdmin
-    // console.log('value', this.state.value)
-    const affordable = products[0] && products.map(item => item.price.replace('$', '')).filter(price => price => this.state.value)
-    // console.log('affordable', affordable)
+
+    const affordItems = products[0] && products.filter((prod) => {return parseInt(prod.price.slice(1), 10) <= this.state.value} )
+    console.log('affordable items', affordItems)
 
     return (
       <div>
@@ -59,8 +59,8 @@ export class AllProducts extends React.Component {
         </div>
 
         <div className="card-container">
-          {this.props.products[0]
-            ? products.map(product => {
+          {products[0]
+            ? affordItems.map(product => {
                 return (
                   <div key={product.id} className="card">
                     <Link to={`/products/${product.id}`}>
@@ -84,7 +84,7 @@ export class AllProducts extends React.Component {
                   </div>
                 )
               })
-            : 'loading....'}
+            : 'Sorry, there are currently no items available. Make sure to check back soon!'}
         </div>
         {isAdmin ? (
           <div>
