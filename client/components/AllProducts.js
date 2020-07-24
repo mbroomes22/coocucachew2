@@ -58,6 +58,10 @@ export class AllProducts extends React.Component {
           <p>Price Range: Less than ${this.state.value}</p>
         </div>
 
+        <div>
+          <p>{products[0] ? affordItems.length : 0} results found</p>
+        </div>
+
         <div className="card-container">
           {products[0]
             ? affordItems.map(product => {
@@ -84,7 +88,7 @@ export class AllProducts extends React.Component {
                   </div>
                 )
               })
-            : 'Sorry, there are currently no items available. Make sure to check back soon!'}
+            : 'Loading...'}
         </div>
         {isAdmin ? (
           <div>
