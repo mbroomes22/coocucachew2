@@ -61,6 +61,9 @@ export class ConfirmOrder extends Component {
         </button>
         <h1 className="header">Confirm Order Details</h1>
         <br />
+        <div className="shippingInfo">
+
+        <div className="purchasing">
         <h2>Shipping Address</h2>
         <div className="card-container">
           <ul className="card">
@@ -86,6 +89,9 @@ export class ConfirmOrder extends Component {
             </ol>
           </ul>
         </div>
+        </div>
+
+        <div className="purchasing">
         <h2>Payment Method</h2>
         <ul>
           <ol>
@@ -93,9 +99,11 @@ export class ConfirmOrder extends Component {
           </ol>
         </ul>
         <br />
+        </div>
+
+        <div className="purchasing">
         <h2>Review Items</h2>
-        <br />
-        <br />
+
         <ul className="checkout-card-container">
           {cart[0].products &&
             cart[0].products.map(item => (
@@ -117,16 +125,21 @@ export class ConfirmOrder extends Component {
               </div>
             ))}
         </ul>
+        </div>
+
+        <div className="purchasing">
         <h3>Subtotal</h3>
-        ${total}
+        <p>${total}</p>
         <br />
         <h3>Shipping</h3>
-        $6
+        <p>$6</p>
         <br />
         <h2>Total</h2>
-        ${total + 6}
+        <p>${total + 6}</p>
         <br />
         <br />
+        </div>
+        </div>
         <button
           type="submit"
           onClick={this.continue}

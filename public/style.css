@@ -144,6 +144,41 @@ form div {
   flex-direction: column;
 }
 
+.shippingInfo {
+  margin-left: 3%;
+}
+
+.purchasing {
+  border: 1px solid #362f47;
+  border-radius: 10px;
+  background: rgb(230, 173, 207, 0.3);
+  margin: 2%;
+  padding: 2%;
+}
+
+.purchasing h2 {
+  margin: 2%;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+}
+
+.purchasing h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.purchasing p {
+  color: rgb(15, 54, 88);
+  display: flex;
+  justify-content: center;
+}
+
+.purchasing .card {
+  height: 450px;
+  padding: 5%;
+}
+
 /* .checkout {
   margin-left: 40%;
   margin-right: 40%;
