@@ -55,6 +55,7 @@ export class AllProducts extends React.Component {
 
         <div className="slidecontainer">
           <input type="range" min="1" max="20" value="20" className="slider" id="myRange" onChange={this.handleChange} />
+          <p>Price Range: Less than ${this.state.value}</p>
         </div>
 
         <div className="card-container">
