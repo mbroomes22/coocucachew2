@@ -93,11 +93,7 @@ export class ConfirmOrder extends Component {
 
         <div className="purchasing">
         <h2>Payment Method</h2>
-        <ul>
-          <ol>
             <p>Stripe</p>
-          </ol>
-        </ul>
         <br />
         </div>
 
