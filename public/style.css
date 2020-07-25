@@ -426,7 +426,7 @@ form div {
 
 
 .checkout-card {
-  box-shadow: 0px 1px 5px #555;
+  border-radius: 10px;
   background-color: white;
   padding: 1rem;
   width: 180px;

@@ -78,12 +78,12 @@ export class UserHome extends React.Component {
            { orderHistory[0] &&
           (<div>
             <ul className="checkout-card-container">
-          <h3>Your Orders From: </h3>
+          {/* <h3>Your Orders From: </h3> */}
           {/* {<div>({date})</div>} */}
           <div className="history-card">
           <div className="history-info">
               <h4>ORDER PLACED</h4>
-              <p>{Date(orderHistory[0].orderProduct.createdAt).slice(0,11)}</p>
+              <p>{Date(orderHistory[0].orderProduct.createdAt).slice(0,16)}</p>
               <h4>TOTAL</h4>
               <p>$</p>
               <h4>ORDER #</h4>
