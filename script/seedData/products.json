@@ -7,6 +7,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/2017/10/exps11714_THCA153054D08_11_3b-2-696x696.jpg",
     "price": 5,
+    "tags": ["chocolate", "frosting"],
     "productCategoryId": 1
   },
   {
@@ -16,6 +17,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/2018/01/Candy-Cane-Blossom-Cookies_exps49911_TH2379801B07_10_4b_RMS.jpg",
     "price": 10,
+    "tags": ["chocolate"],
     "productCategoryId": 1
   },
   {
@@ -25,6 +27,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/2018/01/Fudge-Bonbon-Cookies_exps9494_CC2661980C04_06_3bC_RMS-1.jpg",
     "price": 7,
+    "tags": ["chocolate"],
     "productCategoryId": 2
   },
   {
@@ -34,6 +37,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/2019/07/Strawberry-Lemon-Cupcakes_EXPS_THAS19_238728_B04_19_7b-696x696.jpg",
     "price": 6,
+    "tags": ["fruits", "frosting"],
     "productCategoryId": 4
   },
   {
@@ -43,6 +47,7 @@
     "imageUrl":
       "https://cincyshopper.com/wp-content/uploads/2015/07/Apple-Pie-Cupcakes-2.jpg",
     "price": 12,
+    "tags": ["fruits", "frosting"],
     "productCategoryId": 4
   },
   {
@@ -51,6 +56,7 @@
     "imageUrl":
       "https://bakerbynature.com/wp-content/uploads/2017/04/untitled-51-of-68-2.jpg",
     "price": 5,
+    "tags": ["fruits", "frosting"],
     "productCategoryId": 4
   },
   {
@@ -60,6 +66,7 @@
     "imageUrl":
       "https://thefirstyearblog.com/wp-content/uploads/2015/10/Reeses-Cupcakes-6-735x1101.jpg",
     "price": 9,
+    "tags": ["chocolate", "nuts", "frosting"],
     "productCategoryId": 4
   },
   {
@@ -69,6 +76,7 @@
     "imageUrl":
       "https://wildwildwhisk.com/wp-content/uploads/2018/05/Snickerdoodle-Cookies-2.jpg",
     "price": 5,
+    "tags": ["chocolate"],
     "productCategoryId": 1
   },
   {
@@ -78,6 +86,7 @@
     "imageUrl":
       "https://cdn.shopify.com/s/files/1/1540/1281/products/BoozyBourbonWalnutToffee_New_540x.png?v=1544748784",
     "price": 7,
+    "tags": ["nuts"],
     "productCategoryId": 1
   },
   {
@@ -87,6 +96,7 @@
     "imageUrl":
       "https://i.etsystatic.com/8060728/r/il/294b76/453982422/il_1588xN.453982422_bpnc.jpg",
     "price": 7,
+    "tags": ["chocolate", "frosting"],
     "productCategoryId": 3
   },
   {
@@ -96,6 +106,7 @@
     "imageUrl":
       "https://i.etsystatic.com/7996733/r/il/4813d4/2255346554/il_1588xN.2255346554_mvv7.jpg",
     "price": 4,
+    "tags": ["chocolate", "fruits", "frosting"],
     "productCategoryId": 3
   },
   {
@@ -105,6 +116,7 @@
     "imageUrl":
       "https://i.etsystatic.com/7996733/r/il/2d3719/2302950429/il_1588xN.2302950429_qrce.jpg",
     "price": 10,
+    "tags": ["chocolate", "frosting"],
     "productCategoryId": 3
   },
   {
@@ -114,6 +126,7 @@
     "imageUrl":
       "https://www.thespruceeats.com/thmb/E7XBY9Ubrn8GWaWeEX1G5yC6gWE=/3432x3432/smart/filters:no_upscale()/LavenderCupCakes-spruce-4-5abd4b68eb97de003785fea2.jpg",
     "price": 10,
+    "tags": ["frosting"],
     "productCategoryId": 4
   },
   {
@@ -123,6 +136,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/2018/01/exps3_BSF2679079C06_15_5b_RMS-1-696x696.jpg",
     "price": 6,
+    "tags": ["nuts", "frosting"],
     "productCategoryId": 4
   },
   {
@@ -132,6 +146,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/2017/10/Spice-Cupcakes_exps8464_RDS2447887A10_26_2b_RMS-2-696x696.jpg",
     "price": 8,
+    "tags": ["chocolate", "frosting"],
     "productCategoryId": 4
   },
   {
@@ -141,6 +156,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/2017/10/exps53962_THCA173831C03_11_5b-696x696.jpg",
     "price": 8,
+    "tags": ["chocolate", "fruits"],
     "productCategoryId": 2
   },
   {
@@ -150,6 +166,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/2018/05/exps140280_CW143042D02_27_7b_WEB-1-696x696.jpg",
     "price": 8,
+    "tags": ["chocolate", "nuts"],
     "productCategoryId": 3
   },
   {
@@ -159,6 +176,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/2018/05/Peppermint-Lava-Cakes_EXPS_THCA17_227180_A6_01_5b-1-696x696.jpg",
     "price": 15,
+    "tags": ["chocolate"],
     "productCategoryId": 2
   },
   {
@@ -168,6 +186,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/0001/01/Snowman-Oreo-Balls_EXPS_FT19_246822_F_1114_1-696x696.jpg",
     "price": 8,
+    "tags": ["chocolate", "frosting"],
     "productCategoryId": 3
   },
   {
@@ -177,6 +196,7 @@
     "imageUrl":
       "https://www.tasteofhome.com/wp-content/uploads/2017/10/exps43801_HC1597097D60-1.jpg",
     "price": 7,
+    "tags": ["chocolate"],
     "productCategoryId": 4
   },
   {
@@ -186,6 +206,7 @@
     "imageUrl":
       "https://i0.wp.com/ediblecrafts.craftgossip.com/files/2015/08/sunflower-decorated-chocolate-cupcake.jpg?resize=600%2C550",
     "price": 9,
+    "tags": ["fruits", "frosting"],
     "productCategoryId": 4
   },
   {
@@ -195,6 +216,7 @@
     "imageUrl":
       "https://theloopywhisk.com/wp-content/uploads/2018/11/Marzipan-Truffles_730px-featured-500x500.jpg",
     "price": 5,
+    "tags": ["chocolate", "nuts"],
     "productCategoryId": 2
   },
 
@@ -206,6 +228,7 @@
     "imageUrl":
       "https://cdn.shopify.com/s/files/1/1540/1281/products/Espresso_Chocolate_Chunk_540x.png?v=1569239786",
     "price": 5,
+    "tags": ["chocolate"],
     "productCategoryId": 1
   },
   {
@@ -215,6 +238,7 @@
     "imageUrl":
       "https://cdn.shopify.com/s/files/1/1540/1281/products/choc_jam_inside_600x600NEW_540x.png?v=1581639491",
     "price": 10,
+    "tags": ["fruits"],
     "productCategoryId": 1
   },
   {
@@ -224,6 +248,7 @@
     "imageUrl":
       "https://coffeebeanflavor.com/wp-content/uploads/2016/07/Dark-Chocolate-Cherry-Truffle.jpg",
     "price": 7,
+    "tags": ["fruits", "chocolate"],
     "productCategoryId": 2
   },
   {
@@ -232,6 +257,7 @@
     "imageUrl":
       "http://cdn.meduriworlddelights.com/images/main/Milk-Chocolate-Peach-Treasures-33008-main.jpg",
     "price": 12,
+    "tags": ["fruits", "chocolate"],
     "productCategoryId": 2
   },
   {
@@ -240,6 +266,7 @@
     "imageUrl":
       "https://www.readersdigest.ca/wp-content/uploads/sites/14/2016/08/wild-blueberry-cake-pops-1024x696.jpg",
     "price": 6,
+    "tags": ["fruits", "frosting"],
     "productCategoryId": 3
   },
   {
@@ -248,6 +275,7 @@
     "imageUrl":
       "https://www.sugarsweet.ca/uploads/1/2/9/2/129270739/s305153677804097004_p24_i2_w720.jpeg",
     "price": 10,
+    "tags": ["chocolate", "frosting"],
     "productCategoryId": 3
   },
   {
@@ -257,6 +285,7 @@
     "imageUrl":
       "https://cdn.shopify.com/s/files/1/1540/1281/products/TripleChocolateLavaCookie_New_1080x.png?v=1588009518",
     "price": 3,
+    "tags": ["chocolate"],
     "productCategoryId": 1
   },
   {
@@ -266,6 +295,7 @@
     "imageUrl":
       "https://cdn.shopify.com/s/files/1/1540/1281/products/Sea-Salt-Chocolate-Chunk_a7ddd218-7328-47af-8d84-6aa4e4ed6498_540x.png?v=1527429042",
     "price": 4,
+    "tags": ["salted", "chocolate"],
     "productCategoryId": 1
   },
   {
@@ -275,6 +305,7 @@
     "imageUrl":
       "https://cdn.shopify.com/s/files/1/1110/4668/products/pecan-pie_1024x1024@2x.jpg?v=1559574083",
     "price": 5,
+    "tags": ["nuts", "chocolate", "salted"],
     "productCategoryId": 2
   },
   {
@@ -284,6 +315,7 @@
     "imageUrl":
       "https://www.buttercupbakeshop.com/wp-content/uploads/2017/06/Salted-Caramel.jpg",
     "price": 7,
+    "tags": ["salted", "frosting"],
     "productCategoryId": 4
   },
   {
@@ -293,6 +325,7 @@
     "imageUrl":
       "https://cdn.shopify.com/s/files/1/1540/1281/products/kitchen_sink_fullsize_600x600_cf40a902-23ba-4e60-b771-65b7f0ea6f03_540x.png?v=1569315839",
     "price": 4,
+    "tags": ["nuts", "chocolate"],
     "productCategoryId": 1
   },
   {
@@ -301,6 +334,7 @@
     "imageUrl":
       "https://149366112.v2.pressablecdn.com/wp-content/uploads/2016/03/hazelnut-chocolate-truffle-eggs.jpg",
     "price": 12,
+    "tags": ["nuts", "chocolate"],
     "productCategoryId": 2
   },
   {
@@ -309,6 +343,7 @@
     "imageUrl":
       "https://cdn.shopify.com/s/files/1/1540/1281/products/RockyRoad_New_540x.png?v=1576703986",
     "price": 3,
+    "tags": ["chocolate", "nuts"],
     "productCategoryId": 1
   },
   {
@@ -318,6 +353,7 @@
     "imageUrl":
       "https://cdn.shopify.com/s/files/1/1110/4668/products/candy-bar_better-finger_1024x1024@2x.jpg?v=1585104647",
     "price": 9,
+    "tags": ["nuts", "chocolate"],
     "productCategoryId": 2
   },
   {
@@ -326,6 +362,7 @@
     "imageUrl":
       "https://i.pinimg.com/564x/e4/23/b5/e423b511a97965876c018de401d68adb.jpg",
     "price": 8,
+    "tags": ["frosting"],
     "productCategoryId": 3
   },
   {
@@ -335,6 +372,7 @@
     "imageUrl":
       "https://www.buttercupbakeshop.com/wp-content/uploads/2017/04/Dark-Choc-Peanut-Butter-Cupcake.jpg",
     "price": 3,
+    "tags": ["chocolate", "nuts", "frosting"],
     "productCategoryId": 4
   },
   {
@@ -344,6 +382,7 @@
     "imageUrl":
       "https://www.buttercupbakeshop.com/wp-content/uploads/2016/11/Ube-Cupcake.jpg",
     "price": 12,
+    "tags": ["frosting"],
     "productCategoryId": 4
   },
   {
@@ -353,6 +392,7 @@
     "imageUrl":
       "https://www.buttercupbakeshop.com/wp-content/uploads/2017/06/CookiesnCream-Cupcake.jpg",
     "price": 9,
+    "tags": ["chocolate", "frosting"],
     "productCategoryId": 4
   }
 ]

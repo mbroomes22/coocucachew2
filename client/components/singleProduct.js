@@ -15,7 +15,6 @@ export class SingleProduct extends Component {
       price: '',
       qty: 0
     }
-    // this.handleSubmit = this.handleSubmit.bind(this)
     this.handleClick = this.handleClick.bind(this)
   }
 
@@ -26,17 +25,7 @@ export class SingleProduct extends Component {
     // : ('loading')
   }
 
-  // handleSubmit(event) {
-  //   event.preventDefault()
 
-  //   const productInfo = {
-  //     name: this.props.singleProduct.name,
-  //     imageUrl: this.props.singleProduct.imageUrl,
-  //     price: this.props.singleProduct.price,
-  //     description: this.props.singleProduct.description,
-  //   }
-  //   this.props.addProduct(productInfo)
-  // }
   async handleClick(product) {
     const orderproduct = this.props.singleProduct
     const userId = this.props.user.id
@@ -51,32 +40,10 @@ export class SingleProduct extends Component {
     alert('Added to cart')
   }
 
-  // Increament = () => {
-  //   this.setState({
-  //     name: this.props.singleProduct.name,
-  //     price: this.props.singleProduct.price,
-  //     qty: this.state.qty + 1,
-  //   })
-  //   ls.set(`${name}`, this.props.singleProduct)
-  //   ls.set('price', this.props.singleProduct.price)
-  //   ls.set('quantity', this.state.qty + 1)
-  // }
-
-  // Decreament = () => {
-  //   this.setState({
-  //     name: this.props.singleProduct.name,
-  //     price: this.props.singleProduct.price,
-  //     qty: this.state.qty - 1,
-  //   })
-  //   ls.set('name', this.props.singleProduct.name)
-  //   ls.set('price', this.props.singleProduct.price)
-  //   ls.set('quantity', this.state.qty - 1)
-  // }
-
   render() {
     const singleProduct = this.props.singleProduct
     const isAdmin = this.props.user.isAdmin
-
+    console.log("singleProduct tags", singleProduct.tags)
     return (
       <div className="singleProduct_page">
         <div className="header" key={singleProduct.id}>
@@ -109,6 +76,15 @@ export class SingleProduct extends Component {
           >
             add to cart
           </button>
+        </div>
+
+        <div className="tags">
+          <p>Tags:&nbsp;</p> {singleProduct.tags ? singleProduct.tags.map(item =>
+          { return (
+                  <div key={item} >
+                    <p>#{item}&nbsp;</p>
+                  </div>
+                  )}) : null}
         </div>
 
         {isAdmin ? (

@@ -285,6 +285,10 @@ form div {
   font-family: Chalkduster, fantasy;
 }
 
+.header h3 {
+  font-family: Chalkduster, fantasy;
+}
+
 .singleProduct_page {
   font-family: Chalkduster, fantasy;
   padding: 1rem;
@@ -501,6 +505,13 @@ form div {
   font-style: normal;
   font-variant: normal;
   text-transform: none;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 8%;
 }
 
 #navBar-container {

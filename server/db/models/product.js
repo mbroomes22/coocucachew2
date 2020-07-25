@@ -25,6 +25,11 @@ const Product = db.define('product', {
     type: Sequelize.TEXT,
     defaultValue:'candy-set-sweet-desserts-chocolate-candies-vector-26628401.jpg'
   },
+  tags: {
+    type: Sequelize.ARRAY(Sequelize.STRING),
+    allowNull: true,
+    defaultValue: []
+  },
   description: {
     type: Sequelize.TEXT,
     allowNull: false,
