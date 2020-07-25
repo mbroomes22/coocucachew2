@@ -7,16 +7,27 @@ import {getOrderHistory} from '../store/saveOrder'
 /**
  * COMPONENT
  */
-export const UserHome = props => {
-  const {name, isLoggedIn} = props
-  console.log("props", props)
+export class UserHome extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+  //this.props.match.params.productId
+  componentDidMount() {
+    this.props.getOrders()
+  }
+
+  render() {
+  const {name, isLoggedIn, orderHistory} = this.props
+  console.log('USER HOME orderHistory', orderHistory)
+  console.log("props", this.props)
   return (
     <div>
       {isLoggedIn ? (
         <div>
           <h3 className="pad">Welcome {name}</h3>
           <h2 h2 id="main-header">
-            See What's Popular:
+            Browse our categories:
           </h2>
           <br />
           <div className="card-container">
@@ -61,8 +72,96 @@ export const UserHome = props => {
               </Link>
             </div>
           </div>
+
+          <div className="orderHistory">
           <h2 id="main-header">Your Order History:</h2>
-          <h3 className="pad">Coming Soon</h3>
+           { orderHistory[0] &&
+          (<div>
+            <ul className="checkout-card-container">
+          <h3>Your Orders From: </h3>
+          {/* {<div>({date})</div>} */}
+          <div className="history-card">
+          <div className="history-info">
+              <h4>ORDER PLACED {}</h4>
+              <h4>TOTAL</h4>
+              <h4>ORDER # {orderHistory[0].orderProduct.orderId}</h4>
+            </div>
+          { orderHistory.map(item => (
+            <div key={item.id}>
+              <div key={item.id} className="checkout-card history">
+                <ol>
+                  <h3>{item.name}</h3>
+                </ol>
+                <ol>
+                  <h3>
+                    <img src={item.imageUrl} width="75px" />
+                  </h3>
+                </ol>
+                <ol>
+                  <h3>Qty: {item.orderProduct.quantity}</h3>
+                </ol>
+                <ol>
+                  <h3>{item.price}</h3>
+                </ol>
+              </div>
+              </div>
+            ))}
+            </div>
+        </ul>
+          </div>)
+          }
+          </div>
+
+          <div>
+          <h2 h2 id="main-header">
+            See What's Popular:
+          </h2>
+          <div className="card-container">
+            <div className="card">
+              <Link to="/products/4">
+                <img
+                  src="https://www.tasteofhome.com/wp-content/uploads/2019/07/Strawberry-Lemon-Cupcakes_EXPS_THAS19_238728_B04_19_7b-696x696.jpg"
+                  height="200px"
+                  className="all-prod-img"
+                />
+                <h3>Strawberry Lemon Cupcake</h3>
+              </Link>
+            </div>
+
+            <div className="card">
+              <Link to="/products/35">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/1540/1281/products/RockyRoad_New_540x.png?v=1576703986"
+                  height="200px"
+                  className="all-prod-img"
+                />
+                <h3>Rocky Road Peanut Chip</h3>
+              </Link>
+            </div>
+
+            <div className="card">
+              <Link to="/products/28">
+                <img
+                  src="https://www.sugarsweet.ca/uploads/1/2/9/2/129270739/s305153677804097004_p24_i2_w720.jpeg"
+                  height="200px"
+                  className="all-prod-img"
+                />
+                <h3>Just chocolate'</h3>
+              </Link>
+            </div>
+
+            <div className="card">
+              <Link to="/products/13">
+                <img
+                  src="https://www.thespruceeats.com/thmb/E7XBY9Ubrn8GWaWeEX1G5yC6gWE=/3432x3432/smart/filters:no_upscale()/LavenderCupCakes-spruce-4-5abd4b68eb97de003785fea2.jpg"
+                  height="200px"
+                  className="all-prod-img"
+                />
+                <h3>Lavender Vanilla Cupcake</h3>
+              </Link>
+            </div>
+          </div>
+          </div>
           <br />
           <br />
           <br />
@@ -116,6 +215,7 @@ export const UserHome = props => {
     </div>
   )
 }
+}
 
 /**
  * CONTAINER
@@ -123,7 +223,8 @@ export const UserHome = props => {
 const mapState = state => {
   return {
     isLoggedIn: !!state.user.id,
-    name: state.user.name
+    name: state.user.name,
+    orderHistory: state.cart[0].products
   }
 }
 

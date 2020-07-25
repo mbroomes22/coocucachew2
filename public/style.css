@@ -430,6 +430,7 @@ form div {
   background-color: white;
   padding: 1rem;
   width: 180px;
+  height: 270px;
 }
 
 .checkout-card ol {
@@ -512,6 +513,32 @@ form div {
   justify-content: center;
   flex-direction: row;
   margin: 8%;
+}
+
+.orderHistory {
+  margin-bottom: 5%;
+}
+
+.history-card {
+  border: 2px solid #362f47;
+  border-radius: 10px;
+  background: #B8CFF9;
+  height: 1000px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 2%;
+}
+
+.history-info {
+  background: #8eb0f0;
+}
+
+.history {
+  width: 100px;
+  height: 280px;
+  margin: 1% .25% 1% .25%;
 }
 
 #navBar-container {

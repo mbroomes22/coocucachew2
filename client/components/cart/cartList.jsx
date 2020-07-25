@@ -24,7 +24,9 @@ export class CartList extends React.Component {
       ls.set('isPending', this.props.cart[0].isPending)
       ls.set('cartProducts', this.props.cart[0].products)
 
-      this.props.cart[0].products.map(product => {
+     console.log("this.props.cart[0]", this.props.cart[0])
+
+     this.props.cart[0].products && this.props.cart[0].products.map(product => {
         ls.set(`${product.name}`, product)
         subtotal +=
           product.orderProduct.quantity *

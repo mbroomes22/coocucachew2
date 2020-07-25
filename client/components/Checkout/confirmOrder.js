@@ -29,6 +29,7 @@ export class ConfirmOrder extends Component {
 
   handleSubmit = evt => {
     evt.preventDefault()
+    console.log("this.props=>", this.props)
     const subTotal = checkoutSubTotal(this.props.cart) //not sure if the user's cart prop is an arr named cart
     const total = checkoutTotal(subTotal)
     this.props.addOrder(subTotal, total, this.props.cart.userId) //not sure if user's id is named userId and located in cart

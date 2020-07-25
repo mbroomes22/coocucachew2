@@ -45,7 +45,6 @@ export class AllProducts extends React.Component {
     const isAdmin = this.props.user.isAdmin
 
     const affordItems = products[0] && products.filter((prod) => {return parseInt(prod.price.slice(1), 10) <= this.state.value} )
-    console.log('affordable items', affordItems)
 
     return (
       <div>
