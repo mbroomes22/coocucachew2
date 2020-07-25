@@ -24,6 +24,10 @@ h2 {
   font-size: 1.1em;
 }
 
+h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -362,11 +366,17 @@ form div {
   filter: none;
 }
 
+.card h3 {
+  display: flex;
+  justify-content: center;
+}
+
 .checkout-card-container {
   display: flex;
   grid-gap: 1rem;
   padding: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 
