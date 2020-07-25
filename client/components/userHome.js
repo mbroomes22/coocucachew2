@@ -82,9 +82,12 @@ export class UserHome extends React.Component {
           {/* {<div>({date})</div>} */}
           <div className="history-card">
           <div className="history-info">
-              <h4>ORDER PLACED {}</h4>
+              <h4>ORDER PLACED</h4>
+              <p>{Date(orderHistory[0].orderProduct.createdAt).slice(0,11)}</p>
               <h4>TOTAL</h4>
-              <h4>ORDER # {orderHistory[0].orderProduct.orderId}</h4>
+              <p>$</p>
+              <h4>ORDER #</h4>
+              <p>{orderHistory[0].orderProduct.orderId}</p>
             </div>
           { orderHistory.map(item => (
             <div key={item.id}>
