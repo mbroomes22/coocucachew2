@@ -23,6 +23,9 @@ const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
             </div>
           </div>
           </div>
+          <a className='nav-icon'>
+              <span></span><span></span><span></span>
+          </a>
           <div className="mid-nav">
           <h1>Coocucachew</h1>
           </div>

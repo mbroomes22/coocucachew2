@@ -45,6 +45,10 @@ a {
   align-content: center;
 }
 
+.pad {
+  padding: 3%;
+}
+
 .login-field {
   padding: 0.42857em;
     width: 90%;
@@ -99,9 +103,75 @@ nav a:hover {
   width: fit-content;
 }
 
+ @media screen and (max-width: 950px) {
+  .mid-nav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+ }
+
 .right-nav {
   display: flex;
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 730px) {
+  .left-nav {
+    display: none;
+  }
+
+  .right-nav {
+    display: none;
+  }
+ }
+
+ /* hamburger menu */
+ .nav-icon {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+ }
+
+ @media screen and (max-width: 730px) {
+  .nav-icon {
+    display: flex;
+  }
+ }
+
+ @media screen and (max-width: 420px) {
+  .nav-icon {
+    left: 0;
+  }
+ }
+
+ .nav-icon span {
+  background: #333;
+  width: 30px;
+  height: 2px;
+  display: block;
+  transition: 300ms linear all;
+
+}
+
+.nav-icon span:nth-child(1),
+.nav-icon span:nth-child(3) {
+  width: 20px ;
+  margin: 0 auto;
+}
+
+.nav-icon span:nth-child(2) {
+  margin: 5px 0;
+  width: 32px;
+}
+
+.nav-icon:hover span:nth-child(1),
+.nav-icon:hover span:nth-child(3) {
+  width: 30px;
 }
 
 form div {
@@ -317,41 +387,12 @@ form div {
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   grid-gap: 3rem;
   padding: 1rem;
   font-family: Chalkduster, fantasy;
-}
-
-@media screen and (max-width: 1200px) {
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
-    padding: 1rem;
-    font-family: Chalkduster, fantasy;
-  }
-}
-
-@media screen and (max-width: 1040px) {
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
-    padding: 1rem;
-    font-family: Chalkduster, fantasy;
-  }
-}
-
-@media screen and (max-width: 675px) {
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 3rem;
-    padding: 1rem;
-    font-family: Chalkduster, fantasy;
-  }
 }
 
 .card {

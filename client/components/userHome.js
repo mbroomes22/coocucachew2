@@ -14,7 +14,7 @@ export const UserHome = props => {
     <div>
       {isLoggedIn ? (
         <div>
-          <h3>Welcome, {name}</h3>
+          <h3 className="pad">Welcome {name}</h3>
           <h2 h2 id="main-header">
             See What's Popular:
           </h2>
@@ -61,8 +61,8 @@ export const UserHome = props => {
               </Link>
             </div>
           </div>
-          <h2>See Your Order History:</h2>
-          <h3>Coming Soon</h3>
+          <h2 id="main-header">Your Order History:</h2>
+          <h3 className="pad">Coming Soon</h3>
           <br />
           <br />
           <br />
