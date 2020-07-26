@@ -517,11 +517,15 @@ form div {
 
 .active-tag-btn {
   background: #193263;
-  border: 1px solid #90b3f0;
+  /* box-shadow: 4px 8px 16px 3px rgba(0,0,0,0.2); */
+  box-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 15px #fff, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 0px #000, 0 0 5px #000;
 }
 
 .active-tag-btn:hover {
-  background: #7283a5;
+  background: #102550;
+  text-decoration: line-through;
+  transition: .5s ease-in-out;
+  color: #fff;
 }
 
 .orderHistory {
