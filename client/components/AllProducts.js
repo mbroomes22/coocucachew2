@@ -11,7 +11,8 @@ export class AllProducts extends React.Component {
   constructor(){
     super()
     this.state= {
-      value: 20
+      value: 20,
+      filterBy: ''
     }
     this.handleClick = this.handleClick.bind(this)
   }
@@ -40,11 +41,28 @@ export class AllProducts extends React.Component {
     this.setState({value: evt.target.value})
   }
 
+  filtration = (evt) => {
+    console.log("value=>", evt.target.value)
+    if (!this.state.filterBy) {
+      this.setState({
+        filterBy: evt.target.value
+      })
+    } else {
+      this.setState({
+        filterBy: ""
+      })
+    }
+  }
+
   render() {
     const {products} = this.props
     const isAdmin = this.props.user.isAdmin
 
     const affordItems = products[0] && products.filter((prod) => {return parseInt(prod.price.slice(1), 10) <= this.state.value} )
+    console.log("this.state.filterBy=>", this.state.filterBy)
+    const filteredItems = affordItems && affordItems.filter(item => item.tags.includes(this.state.filterBy))
+
+    console.log("filteredItems=>", filteredItems)
 
     return (
       <div>
@@ -61,11 +79,11 @@ export class AllProducts extends React.Component {
 
         <div className="slidecontainer">
           <h3>Search by tag:</h3>
-          <button type="button" className="buttonC">chocolate</button>{' '}
-          <button type="button" className="buttonC">frosting</button>{' '}
-          <button type="button" className="buttonC">nuts</button>{' '}
-          <button type="button" className="buttonC">fruits</button>{' '}
-          <button type="button" className="buttonC">salted</button>{' '}
+          <button type="button" className="buttonC" value="chocolate" onClick={this.filtration}>chocolate</button>{' '}
+          <button type="button" className="buttonC" value="frosting" onClick={this.filtration}>frosting</button>{' '}
+          <button type="button" className="buttonC" value="nuts" onClick={this.filtration}>nuts</button>{' '}
+          <button type="button" className="buttonC" value="fruits" onClick={this.filtration}>fruits</button>{' '}
+          <button type="button" className="buttonC" value="salted" onClick={this.filtration}>salted</button>{' '}
         </div>
 
         <div>
