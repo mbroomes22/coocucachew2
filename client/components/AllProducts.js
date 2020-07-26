@@ -87,13 +87,13 @@ export class AllProducts extends React.Component {
         </div>
 
         <div>
-          <p>{products[0] ? affordItems.length : 0} results found</p>
+          <p>{(products[0] && filteredItems[0]) ? filteredItems.length : (products[0] && !filteredItems[0]) ? affordItems.length : 0} results found</p>
         </div>
         </div>
 
         <div className="card-container">
-          {products[0]
-            ? affordItems.map(product => {
+          {(products[0] && filteredItems[0])
+            ? filteredItems.map(product => {
                 return (
                   <div key={product.id} className="card">
                     <Link to={`/products/${product.id}`}>
@@ -117,7 +117,31 @@ export class AllProducts extends React.Component {
                   </div>
                 )
               })
-            : 'Loading...'}
+            : (products[0] && !filteredItems[0])
+            ? affordItems.map(product => {
+                return (
+                  <div key={product.id} className="card">
+                    <Link to={`/products/${product.id}`}>
+                    <img src={product.imageUrl} className="all-prod-img" />
+
+                      <h4 className="all-product-container">{product.name}</h4>
+
+                    <h4 className="product-price">{product.price}</h4>
+                    </Link>
+                    <button type="submit" className="prodBtn" onClick={e => this.handleClick(e, product)}>Add to Cart</button>
+                    {isAdmin ? (
+                      <button
+                        className="prodBtn admin"
+                        type="button"
+                        onClick={() => this.handleRemove(product.id)}
+                        width="100px"
+                      >
+                        <h4>remove</h4>
+                      </button>
+                    ) : null}
+                  </div>
+                )
+              }):'Loading...'}
         </div>
         {isAdmin ? (
           <div>
