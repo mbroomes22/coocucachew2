@@ -515,6 +515,15 @@ form div {
   margin: 8%;
 }
 
+.active-tag-btn {
+  background: #193263;
+  border: 1px solid #90b3f0;
+}
+
+.active-tag-btn:hover {
+  background: #7283a5;
+}
+
 .orderHistory {
   margin-bottom: 5%;
 }

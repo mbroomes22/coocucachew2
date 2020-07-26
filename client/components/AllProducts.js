@@ -54,6 +54,14 @@ export class AllProducts extends React.Component {
     }
   }
 
+  observe = (evt) => {
+    evt.preventDefault()
+
+    console.log("evt.target.className=>", evt.target.className)
+    evt.target.className === 'buttonC' ? (evt.target.className += ' active-tag-btn') : (evt.target.className = 'buttonC')
+
+  }
+
   render() {
     const {products} = this.props
     const isAdmin = this.props.user.isAdmin
@@ -79,11 +87,11 @@ export class AllProducts extends React.Component {
 
         <div className="slidecontainer">
           <h3>Search by tag:</h3>
-          <button type="button" className="buttonC" value="chocolate" onClick={this.filtration}>chocolate</button>{' '}
-          <button type="button" className="buttonC" value="frosting" onClick={this.filtration}>frosting</button>{' '}
-          <button type="button" className="buttonC" value="nuts" onClick={this.filtration}>nuts</button>{' '}
-          <button type="button" className="buttonC" value="fruits" onClick={this.filtration}>fruits</button>{' '}
-          <button type="button" className="buttonC" value="salted" onClick={this.filtration}>salted</button>{' '}
+          <button type="button" className="buttonC" value="chocolate" onClick={(evt) => {this.filtration(evt); this.observe(evt)}}>chocolate</button>{' '}
+          <button type="button" className="buttonC" value="frosting" onClick={(evt) => {this.filtration(evt); this.observe(evt)}}>frosting</button>{' '}
+          <button type="button" className="buttonC" value="nuts" onClick={(evt) => {this.filtration(evt); this.observe(evt)}}>nuts</button>{' '}
+          <button type="button" className="buttonC" value="fruits" onClick={(evt) => {this.filtration(evt); this.observe(evt)}}>fruits</button>{' '}
+          <button type="button" className="buttonC" value="salted" onClick={(evt) => {this.filtration(evt); this.observe(evt)}}>salted</button>{' '}
         </div>
 
         <div>
