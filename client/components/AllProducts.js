@@ -42,7 +42,6 @@ export class AllProducts extends React.Component {
   }
 
   filtration = (evt) => {
-    console.log("value=>", evt.target.value)
     if (!this.state.filterBy) {
       this.setState({
         filterBy: evt.target.value
@@ -57,7 +56,6 @@ export class AllProducts extends React.Component {
   observe = (evt) => {
     evt.preventDefault()
 
-    console.log("evt.target.className=>", evt.target.className)
     evt.target.className === 'buttonC' ? (evt.target.className += ' active-tag-btn') : (evt.target.className = 'buttonC')
 
   }
@@ -67,10 +65,7 @@ export class AllProducts extends React.Component {
     const isAdmin = this.props.user.isAdmin
 
     const affordItems = products[0] && products.filter((prod) => {return parseInt(prod.price.slice(1), 10) <= this.state.value} )
-    console.log("this.state.filterBy=>", this.state.filterBy)
     const filteredItems = affordItems && affordItems.filter(item => item.tags.includes(this.state.filterBy))
-
-    console.log("filteredItems=>", filteredItems)
 
     return (
       <div>
