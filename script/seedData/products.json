@@ -31,22 +31,22 @@
     "productCategoryId": 2
   },
   {
-    "name": "Strawberry Lemon Cupcake",
-    "description":
-      "Light, fluffy cupcakes vanilla cake topped with a strawberry buttercream frosting and fresh strawberry.",
-    "imageUrl":
-      "https://www.tasteofhome.com/wp-content/uploads/2019/07/Strawberry-Lemon-Cupcakes_EXPS_THAS19_238728_B04_19_7b-696x696.jpg",
-    "price": 6,
-    "tags": ["fruits", "frosting"],
-    "productCategoryId": 4
-  },
-  {
     "name": "Apple Platz",
     "description":
       "Platz occupies the sweet spot between cake and pie in a cupcake",
     "imageUrl":
       "https://cincyshopper.com/wp-content/uploads/2015/07/Apple-Pie-Cupcakes-2.jpg",
     "price": 12,
+    "tags": ["fruits", "frosting"],
+    "productCategoryId": 4
+  },
+  {
+    "name": "Strawberry Lemon Cupcake",
+    "description":
+      "Light, fluffy cupcakes vanilla cake topped with a strawberry buttercream frosting and fresh strawberry.",
+    "imageUrl":
+      "https://www.tasteofhome.com/wp-content/uploads/2019/07/Strawberry-Lemon-Cupcakes_EXPS_THAS19_238728_B04_19_7b-696x696.jpg",
+    "price": 6,
     "tags": ["fruits", "frosting"],
     "productCategoryId": 4
   },
@@ -170,14 +170,13 @@
     "productCategoryId": 3
   },
   {
-    "name": "Air-Fryer Lava Cakes",
-    "description":
-      " It never ceases to amaze to see warm chocolate pudding ooze out of the center of this tender chocolate cake. These cakes are a showstopper on a plate! ",
+    "name": "Rocky Road Peanut Chip",
+    "description": "Yes, it's super chocolatey, peanutty, and marshmallowy",
     "imageUrl":
-      "https://www.tasteofhome.com/wp-content/uploads/2018/05/Peppermint-Lava-Cakes_EXPS_THCA17_227180_A6_01_5b-1-696x696.jpg",
-    "price": 15,
-    "tags": ["chocolate"],
-    "productCategoryId": 2
+      "https://cdn.shopify.com/s/files/1/1540/1281/products/RockyRoad_New_540x.png?v=1576703986",
+    "price": 3,
+    "tags": ["chocolate", "nuts"],
+    "productCategoryId": 1
   },
   {
     "name": "Snowman Oreo Balls",
@@ -219,8 +218,6 @@
     "tags": ["chocolate", "nuts"],
     "productCategoryId": 2
   },
-
-
   {
     "name": "Espresso Chocolate Chunk",
     "description":
@@ -338,15 +335,6 @@
     "productCategoryId": 2
   },
   {
-    "name": "Rocky Road Peanut Chip",
-    "description": "Yes, it's super chocolatey, peanutty, and marshmallowy",
-    "imageUrl":
-      "https://cdn.shopify.com/s/files/1/1540/1281/products/RockyRoad_New_540x.png?v=1576703986",
-    "price": 3,
-    "tags": ["chocolate", "nuts"],
-    "productCategoryId": 1
-  },
-  {
     "name": "Betterfinger",
     "description":
       "2 pieces of crispy peanut butter core dipped in milk chocolate.",
@@ -355,6 +343,16 @@
     "price": 9,
     "tags": ["nuts", "chocolate"],
     "productCategoryId": 2
+  },
+  {
+    "name": "Freakfetti Cupcake",
+    "description":
+      " Sometimes a cupcake is so much more than a cupcake, like this over-the-top, rainbow-colored concoction infused with real vanilla and strawberries. ",
+    "imageUrl":
+      "https://i.pinimg.com/originals/cf/23/77/cf23779a185a7f233936a39141f249ef.jpg",
+    "price": 18,
+    "tags": ["chocolate", "frosting", "fruits"],
+    "productCategoryId": 4
   },
   {
     "name": "Galaxy Cake Pops",
