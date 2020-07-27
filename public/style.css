@@ -141,6 +141,10 @@ nav a:hover {
   .nav-icon {
     display: flex;
   }
+
+  .sticky .nav-icon {
+      top: 32px;
+  }
  }
 
  @media screen and (max-width: 420px) {
@@ -581,6 +585,40 @@ form div {
   color: black;
   font-weight: bold;
   text-shadow: 1px 1px white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8%;
+  z-index: 5;
+}
+
+@media screen and (max-width: 360px) {
+  .sticky {
+  height: 10%;
+  }
+
+  .sticky .nav-icon {
+    top: 30px;
+  }
+}
+
+@media screen and (max-width: 315px) {
+.sticky {
+  height: 15%;
+}
+.nav-icon {
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+.sticky .nav-icon {
+  top: 70px;
+  left: 0;
+  right: 0;
+}
 }
 
 .dropdown {

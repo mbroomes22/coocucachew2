@@ -4,8 +4,21 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
 
+window.onscroll = function() {stickyNav()};
+
+// var navbar = document.getElementById("navbar");
+// var sticky = navbar.offsetTop;
+
+function stickyNav() {
+  if (window.pageYOffset >= 55) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
 const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
-  <div className="navbar">
+  <div className="navbar" id="navbar">
     <nav>
       {isLoggedIn ? (
         <div id="navBar-container">
