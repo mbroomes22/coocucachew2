@@ -76,7 +76,7 @@ export class AllProducts extends React.Component {
         <div className="filteredRes">
         <div className="slidecontainer">
           <h3>Set your budget!</h3>
-          <input type="range" min="1" max="20" value="20" className="slider" id="myRange" onChange={this.handleChange} />
+          <input type="range" min="1" max="20" value={this.state.value} className="slider" id="myRange" onChange={this.handleChange} />
           <p>Price Range: Less than ${this.state.value}</p>
         </div>
 

@@ -224,6 +224,8 @@ export class UserHome extends React.Component {
  * CONTAINER
  */
 const mapState = state => {
+  console.log('state.cart', state.cart)
+  console.log('!state.cart', !state.cart)
   return {
     isLoggedIn: !!state.user.id,
     name: state.user.name,
