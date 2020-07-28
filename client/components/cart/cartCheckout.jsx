@@ -34,7 +34,7 @@ export class CartCheckout extends React.Component {
     console.log("ls.products cart chkout=>", ls.products)
     return (
       <div>
-        {this.props.cart[0].products ? (
+        {(this.props.cart[0].products && ls.get('subtotal') !== 0) ? (
           <div id="cart_total">
             <div>
               <h4>Subtotal: {'$' + ls.get('subtotal')}</h4>
@@ -51,7 +51,7 @@ export class CartCheckout extends React.Component {
               </form>
             </div>
           </div>
-        ) : (
+        ) : (this.props.cart[0].products) ? 'Your cart is empty.'  : (
           'Loading your total...'
         )}
       </div>

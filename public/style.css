@@ -572,7 +572,6 @@ form div {
 }
 
 .navbar {
-  /* background: linear-gradient(to left, #ba7453, #d1a984); */
   background: #B8CFF9;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   border: none;
@@ -580,6 +579,9 @@ form div {
   padding: 12px;
   width: 100%;
   border-bottom: 1em solid #81a0da;
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
 }
 
 .navbar a {

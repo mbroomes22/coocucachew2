@@ -61,8 +61,6 @@ router.put('/:orderId', async (req, res, next) => {
     })
     const updatedOrder = await Order.update(req.body)
     res.send(updatedOrder)
-
-    console.log('SEE ME!!', updatedOrder)
   } catch (err) {
     next(err)
   }
