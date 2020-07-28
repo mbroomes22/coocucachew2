@@ -2,6 +2,7 @@
 //clicking 'Confirm&Checkout' button should send user's address, cart, and payment to db
 import React, {Component} from 'react'
 import {updateOrderHistory, updateUserAddresses} from '../../store/saveOrder'
+import {updateOrderinDb} from '../../store/cartStore'
 import {connect} from 'react-redux'
 
 export class ConfirmOrder extends Component {
@@ -15,24 +16,24 @@ export class ConfirmOrder extends Component {
     this.props.prevStep()
   }
 
-  checkoutSubTotal = cartItemsArr => {
-    let subTotal = 0
-    cartItemsArr.forEach(item => {
-      subTotal += item.price * item.qty
-    })
-    return subTotal
-  }
+  // checkoutSubTotal = cartItemsArr => {
+  //   let subTotal = 0
+  //   cartItemsArr.forEach(item => {
+  //     subTotal += item.price * item.qty
+  //   })
+  //   return subTotal
+  // }
 
-  checkoutTotal = subTotal => {
-    return subTotal + 6
-  }
+  // checkoutTotal = subTotal => {
+  //   return subTotal + 6
+  // }
 
-  handleSubmit = evt => {
-    evt.preventDefault()
+  handleSubmit = (e, total) => {
+    e.preventDefault()
     console.log("this.props=>", this.props)
-    const subTotal = checkoutSubTotal(this.props.cart) //not sure if the user's cart prop is an arr named cart
-    const total = checkoutTotal(subTotal)
-    this.props.addOrder(subTotal, total, this.props.cart.userId) //not sure if user's id is named userId and located in cart
+    const subTotal = total
+    const finalTotal = total + 6
+    this.props.addOrder(subTotal, finalTotal, this.props.cart[0].userId) //not sure if user's id is named userId and located in cart
     this.props.addAddress(
       this.state.streetAddress,
       this.state.zipCode,
@@ -47,6 +48,15 @@ export class ConfirmOrder extends Component {
     })
   }
 
+  handleCheckout = (e, total) => {
+    e.preventDefault()
+    const {cart, id, updateDbCart} = this.props
+    cart.subTotal = total
+    cart.total = total + 6
+    cart.isPending = FALSE
+    updateDbCart(cart, id)
+  }
+
   render() {
     const {values: {name, email, streetAddress, zipCode, state}} = this.props
     const {cart} = this.props
@@ -54,6 +64,7 @@ export class ConfirmOrder extends Component {
     cart[0].products.map(
       item => (total += item.price.slice(1) * item.orderProduct.quantity)
     )
+    console.log("this.props=>", this.props)
     return (
       <div className="center">
         <br />
@@ -140,7 +151,7 @@ export class ConfirmOrder extends Component {
         <button
           type="submit"
           onClick={this.continue}
-          onSubmit={this.handleSubmit}
+          onSubmit={(e, total) => this.handleCheckout(e, total)}
           className="buttonC checkout"
         >
           Confirm & Checkout
@@ -158,7 +169,8 @@ const mapDispatch = dispatch => ({
   addOrder: (orderSubTotal, orderTotal, orderUserID) =>
     dispatch(updateOrderHistory(orderSubTotal, orderTotal, orderUserID)),
   addAddress: (newAddress, newZip, newState) =>
-    dispatch(updateUserAddresses(newAddress, newZip, newState))
+    dispatch(updateUserAddresses(newAddress, newZip, newState)),
+  updateDbCart: (order, orderId) => dispatch(updateOrderinDb(order, orderId))
 })
 
 export default connect(mapState, mapDispatch)(ConfirmOrder)

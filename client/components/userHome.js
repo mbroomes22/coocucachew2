@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {getOrderHistory} from '../store/saveOrder'
+import {fetchCart} from '../store/cartStore'
 
 /**
  * COMPONENT
@@ -13,8 +14,8 @@ export class UserHome extends React.Component {
     this.state = {}
   }
   //this.props.match.params.productId
-  componentDidMount() {
-    this.props.getOrders()
+  async componentDidMount() {
+    await this.props.getCart()
   }
 
   render() {
@@ -75,7 +76,7 @@ export class UserHome extends React.Component {
 
           <div className="orderHistory">
           <h2 id="main-header">Your Order History:</h2>
-           { orderHistory[0] &&
+           { (orderHistory[0] && !orderHistory[0].isPending) ?
           (<div>
             <ul className="checkout-card-container">
           {/* <h3>Your Orders From: </h3> */}
@@ -111,7 +112,7 @@ export class UserHome extends React.Component {
             ))}
             </div>
         </ul>
-          </div>)
+          </div>) : null
           }
           </div>
 
@@ -224,18 +225,18 @@ export class UserHome extends React.Component {
  * CONTAINER
  */
 const mapState = state => {
-  console.log('state.cart', state.cart)
-  console.log('!state.cart', !state.cart)
   return {
     isLoggedIn: !!state.user.id,
     name: state.user.name,
-    orderHistory: state.cart[0].products
+    // orderHistory: state.cart[0].products
+    orderHistory: state.cart
   }
 }
 
 const mapDispatch = dispatch => {
   return {
-    getOrders: () => dispatch(getOrderHistory())
+    getOrders: () => dispatch(getOrderHistory()),
+    getCart: () => dispatch(fetchCart())
   }
 }
 

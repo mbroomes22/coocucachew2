@@ -28,7 +28,7 @@ export class CartProducts extends React.Component {
                 </div>
               </div>
             ))
-          : 'Loading... Please wait while I fetch your cart'}
+          : 'Loading... Please wait while we fetch your cart'}
         {
           <CartCheckout
             cart={this.props.cart}

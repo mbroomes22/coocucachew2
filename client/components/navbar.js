@@ -18,7 +18,8 @@ const onClick = () => {
   mySidenav.style.width = "250px"
 }
 
-const closeNav = () => {
+const closeNav = (e) => {
+  e.preventDefault()
   mySidenav.style.width = "0"
 }
 
