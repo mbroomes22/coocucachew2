@@ -6,15 +6,20 @@ import {logout} from '../store'
 
 window.onscroll = function() {stickyNav()};
 
-// var navbar = document.getElementById("navbar");
-// var sticky = navbar.offsetTop;
-
 function stickyNav() {
   if (window.pageYOffset >= 55) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
   }
+}
+
+const onClick = () => {
+  mySidenav.style.width = "250px"
+}
+
+const closeNav = () => {
+  mySidenav.style.width = "0"
 }
 
 const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
@@ -36,7 +41,26 @@ const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
             </div>
           </div>
           </div>
-          <a className='nav-icon'>
+          <div id="mySidenav" className="mySidenav">
+            <a href="" className="closebtn" onClick={closeNav}>&times;</a>
+              <Link to="/home">Home</Link>
+              <Link to="/products">All Sweets</Link>
+              <div className="extra-sides">
+              <Link to="/products/cookies">Cookies</Link>
+              <Link to="/products/chocolates">Chocolates</Link>
+              <Link to="/products/cakepops">Cakepops</Link>
+              <Link to="/products/cupcakes">Cupcakes</Link>
+              </div>
+              {isAdmin ? (
+                <Link to="/users">Users</Link>
+                ) : (
+                <Link to="/cart">Cart</Link>
+              )}
+              <a href="#" onClick={handleClick}>
+                Logout
+              </a>
+          </div>
+          <a className='nav-icon' onClick={onClick}>
               <span></span><span></span><span></span>
           </a>
           <div className="mid-nav">
@@ -60,6 +84,26 @@ const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
           <div className="left-nav">
           <Link to="/products">Home</Link>
           </div>
+          <div id="mySidenav" className="mySidenav">
+            <a href="" className="closebtn" onClick={closeNav}>&times;</a>
+              <Link to="/products">All Sweets</Link>
+              <div className="extra-sides">
+              <Link to="/products/cookies">Cookies</Link>
+              <Link to="/products/chocolates">Chocolates</Link>
+              <Link to="/products/cakepops">Cakepops</Link>
+              <Link to="/products/cupcakes">Cupcakes</Link>
+              </div>
+              {isAdmin ? (
+                <Link to="/users">Users</Link>
+                ) : (
+                <Link to="/cart">Cart</Link>
+              )}
+              <Link to="/login">Login</Link>
+              <Link to="/signup">Sign Up</Link>
+          </div>
+          <a className='nav-icon' onClick={onClick}>
+              <span></span><span></span><span></span>
+          </a>
           <div className="mid-nav">
           <h1>Coocucachew</h1>
           </div>

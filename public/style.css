@@ -135,6 +135,7 @@ nav a:hover {
   display: none;
   align-items: center;
   flex-direction: column;
+  z-index: 1;
  }
 
  @media screen and (max-width: 730px) {
@@ -753,4 +754,51 @@ form div {
 .cakepop-img {
   background: url("cakepops.png") no-repeat center center fixed;
   background-size: cover;
+}
+
+
+/* responsive sidenav */
+
+.mySidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.mySidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #9e9a9a94;
+  display: block;
+  transition: 0.3s;
+}
+
+.extra-sides a {
+  font-size: 18px;
+  padding: 8px 8px 8px 50px;
+}
+
+.mySidenav a:hover {
+  color: #362f47;
+}
+
+.mySidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .mySidenav {padding-top: 15px;}
+  .mySidenav a {font-size: 18px;}
 }
