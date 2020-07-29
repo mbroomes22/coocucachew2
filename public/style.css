@@ -445,7 +445,7 @@ form div {
 }
 
 .all-product-container {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Comic Sans MS', 'Raleway', sans-serif;
   font-size: 16px;
   letter-spacing: 0.4px;
   word-spacing: -1.4px;
@@ -559,7 +559,7 @@ form div {
 }
 
 #navBar-container {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Comic Sans MS', 'Raleway', sans-serif;
   font-size: 25px;
   letter-spacing: 2px;
   word-spacing: 2px;
