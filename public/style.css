@@ -51,13 +51,13 @@ a {
 
 .login-field {
   padding: 0.42857em;
-    width: 90%;
-    box-sizing: border-box;
-    justify-content: center;
-    margin: 1%;
-    border-radius: 6px;
-    border: 1px transparent solid;
-    font-size: 1em;
+  width: 90%;
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 1%;
+  border-radius: 6px;
+  border: 1px transparent solid;
+  font-size: 1em;
 }
 
 label {
@@ -72,7 +72,7 @@ nav a {
 
 nav a:hover {
   color: rgb(47, 48, 49);
-  background:#b1c9f7;
+  background: #b1c9f7;
   border-radius: 10px;
 }
 
@@ -103,13 +103,13 @@ nav a:hover {
   width: fit-content;
 }
 
- @media screen and (max-width: 950px) {
+@media screen and (max-width: 950px) {
   .mid-nav {
     display: flex;
     justify-content: center;
     position: relative;
   }
- }
+}
 
 .right-nav {
   display: flex;
@@ -124,10 +124,10 @@ nav a:hover {
   .right-nav {
     display: none;
   }
- }
+}
 
- /* hamburger menu */
- .nav-icon {
+/* hamburger menu */
+.nav-icon {
   position: absolute;
   top: 40px;
   left: 30px;
@@ -136,36 +136,35 @@ nav a:hover {
   align-items: center;
   flex-direction: column;
   z-index: 1;
- }
+}
 
- @media screen and (max-width: 730px) {
+@media screen and (max-width: 730px) {
   .nav-icon {
     display: flex;
   }
 
   .sticky .nav-icon {
-      top: 32px;
+    top: 32px;
   }
- }
+}
 
- @media screen and (max-width: 420px) {
+@media screen and (max-width: 420px) {
   .nav-icon {
     left: 0;
   }
- }
+}
 
- .nav-icon span {
+.nav-icon span {
   background: #333;
   width: 30px;
   height: 2px;
   display: block;
   transition: 300ms linear all;
-
 }
 
 .nav-icon span:nth-child(1),
 .nav-icon span:nth-child(3) {
-  width: 20px ;
+  width: 20px;
   margin: 0 auto;
 }
 
@@ -197,7 +196,7 @@ form div {
 }
 
 .prodBtn:hover {
-  background: #B8CFF9;
+  background: #b8cff9;
   color: #000;
 }
 
@@ -223,7 +222,7 @@ form div {
 }
 
 .buttonC:hover {
-  background: #B8CFF9;
+  background: #b8cff9;
   color: #000;
 }
 
@@ -407,7 +406,7 @@ form div {
 .card {
   box-shadow: 0px 1px 5px #555;
   background-color: white;
-  width:300px;
+  width: 300px;
   border-radius: 15px 15px 0 0;
   filter: opacity(95%);
 }
@@ -428,7 +427,6 @@ form div {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 
 .checkout-card {
   border-radius: 10px;
@@ -523,13 +521,14 @@ form div {
 .active-tag-btn {
   background: #193263;
   /* box-shadow: 4px 8px 16px 3px rgba(0,0,0,0.2); */
-  box-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 15px #fff, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 0px #000, 0 0 5px #000;
+  box-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 15px #fff, 0 0 10px #000,
+    0 0 15px #000, 0 0 20px #000, 0 0 0px #000, 0 0 5px #000;
 }
 
 .active-tag-btn:hover {
   background: #102550;
   text-decoration: line-through;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   color: #fff;
 }
 
@@ -540,7 +539,7 @@ form div {
 .history-card {
   border: 2px solid #362f47;
   border-radius: 10px;
-  background: #B8CFF9;
+  background: #b8cff9;
   height: fit-content;
   width: 1000px;
   display: flex;
@@ -556,7 +555,7 @@ form div {
 .history {
   width: 100px;
   height: 280px;
-  margin: 10% .25% 1% .25%;
+  margin: 10% 0.25% 1% 0.25%;
 }
 
 #navBar-container {
@@ -572,12 +571,12 @@ form div {
 }
 
 .navbar {
-  background: #B8CFF9;
+  background: #b8cff9;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   border: none;
   outline: 0;
   padding: 12px;
-  width: 100%;
+  width: 100vw;
   border-bottom: 1em solid #81a0da;
   /* position: fixed;
   top: 0;
@@ -591,16 +590,33 @@ form div {
 }
 
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%;
-  height: 8%;
+  width: 100vw;
+  height: 8vh;
   z-index: 5;
+  animation-name: animationFade;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes animationFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    -webkit-transform: none;
+    -o-transform: none;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .sticky {
-  height: 10%;
+    height: 10%;
   }
 
   .sticky .nav-icon {
@@ -609,19 +625,19 @@ form div {
 }
 
 @media screen and (max-width: 315px) {
-.sticky {
-  height: 15%;
-}
-.nav-icon {
-  top: 80px;
-  left: 0;
-  right: 0;
-}
-.sticky .nav-icon {
-  top: 70px;
-  left: 0;
-  right: 0;
-}
+  .sticky {
+    height: 15%;
+  }
+  .nav-icon {
+    top: 80px;
+    left: 0;
+    right: 0;
+  }
+  .sticky .nav-icon {
+    top: 70px;
+    left: 0;
+    right: 0;
+  }
 }
 
 .dropdown {
@@ -629,13 +645,12 @@ form div {
   overflow: hidden;
 }
 
-
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -667,13 +682,12 @@ form div {
 
 .slidecontainer {
   width: 30%;
-  border: 2px solid rgba(0,0,0,0.2);
+  border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background: rgb(230, 173, 207, 0.3);
   padding: 2em;
   min-width: 200px;
 }
-
 
 .slider {
   -webkit-appearance: none;
@@ -681,14 +695,13 @@ form div {
   width: 100%;
   height: 25px;
   border-radius: 5px;
-  background: #B8CFF9;
+  background: #b8cff9;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
   cursor: pointer;
 }
-
 
 .slider:hover {
   opacity: 1;
@@ -705,7 +718,7 @@ form div {
 }
 
 .slider::-webkit-slider-thumb:active {
-  width:22px;
+  width: 22px;
   height: 28px;
   background: #6081bd;
   cursor: grabbing;
@@ -720,12 +733,12 @@ form div {
 }
 
 .main-img {
-  background: url("cupcake.png") no-repeat center center fixed;
+  background: url('cupcake.png') no-repeat center center fixed;
   background-size: cover;
-  height: 400px;
-  width:100%;
+  height: 60vh;
+  width: 100vw;
   border: none;
-  border-bottom: .5em solid #cc89b0;
+  border-bottom: 0.5em solid #cc89b0;
   outline: 0;
   padding: 12px;
   display: flex;
@@ -739,25 +752,24 @@ form div {
 }
 
 .cupcake-img {
-  background: url("cupcakes.png") no-repeat center center fixed;
+  background: url('cupcakes.png') no-repeat center center fixed;
   color: black;
 }
 
 .cookie-img {
-  background: url("cookies.png") no-repeat center center fixed;
+  background: url('cookies.png') no-repeat center center fixed;
   color: black;
 }
 
 .chocolate-img {
-  background: url("chocolates.png") no-repeat center center fixed;
+  background: url('chocolates.png') no-repeat center center fixed;
   background-size: cover;
 }
 
 .cakepop-img {
-  background: url("cakepops.png") no-repeat center center fixed;
+  background: url('cakepops.png') no-repeat center center fixed;
   background-size: cover;
 }
-
 
 /* responsive sidenav */
 
@@ -801,6 +813,10 @@ form div {
 }
 
 @media screen and (max-height: 450px) {
-  .mySidenav {padding-top: 15px;}
-  .mySidenav a {font-size: 18px;}
+  .mySidenav {
+    padding-top: 15px;
+  }
+  .mySidenav a {
+    font-size: 18px;
+  }
 }
