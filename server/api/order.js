@@ -15,7 +15,6 @@ router.get('/', async (req, res, next) => {
         },
         include: Product
       })
-      console.log('--->  FETCHED OR CREATED AN ORDER W A USER  <---')
       res.json(fetchedOrder)
     } else {
       const fetchedOrder = await Order.findOrCreate({
@@ -25,8 +24,6 @@ router.get('/', async (req, res, next) => {
         },
         include: Product
       })
-      console.log('--->  CREATED AN ORDER W/O A USER  <---')
-      console.log('--->  CREATED AN ORDER W/O A USER  <---')
       res.json(fetchedOrder)
     }
   } catch (err) {
@@ -50,7 +47,6 @@ router.get('/', async (req, res, next) => {
 })
 
 router.put('/:orderId', async (req, res, next) => {
-  console.log('REQ.BODY IN ORDER PUT ROUTE', req.body)
   try {
     //check object and update
     const orderToUpdate = await Order.findOne(req.params.id, {
@@ -78,7 +74,6 @@ router.delete('/:orderId', async (req, res, next) => {
           isPending: true
         }
       })
-      console.log('--->  DELETED AN ORDER W A USER  <---')
       res.json(fetchedOrder)
     } else {
       const fetchedOrder = await Order.destroy({
@@ -87,7 +82,6 @@ router.delete('/:orderId', async (req, res, next) => {
           isPending: true
         }
       })
-      console.log('--->  DELETED AN ORDER W/O A USER  <---')
       res.status(201).json(fetchedOrder)
     }
   } catch (err) {
@@ -99,7 +93,6 @@ router.post('/', async (req, res, next) => {
   try {
     let order
     if (!req.body.userId) {
-      // console.log('^^See Me! I am Req.body:^^', req.body)
       order = await Order.findOrCreate({
         where: {
           userId: null,
@@ -108,7 +101,6 @@ router.post('/', async (req, res, next) => {
         include: [Product]
       })
     } else {
-      // console.log('^^See Me! I am Req.body2:^^', req.body)
       order = await Order.findOrCreate({
         where: {
           userId: req.body.userId,
@@ -117,28 +109,21 @@ router.post('/', async (req, res, next) => {
         include: Product
       })
     }
-    // console.log('I AM ORDER', order)
     const orderId = order[0].dataValues.id
     const currentOrder = await Order.findByPk(orderId)
-    // console.log('$I am CURRENTORDER:$', req.body)
-    // console.log('ORDER ID ~~', orderId)
-    // console.log('CURRENT ORDER', currentOrder)
     const newOrderProduct = await OrderProduct.findOrCreate({
       where: {
         productId: req.body.orderProduct.id,
         orderId: currentOrder.dataValues.id
       }
     })
-    // console.log('NEW ORDER PRODUCT', newOrderProduct)
     const productOrder = await OrderProduct.findOne({
       where: {
         orderId: orderId,
         productId: req.body.orderProduct.id
       }
     })
-    // console.log('!!!!PRODUCT_ORDER!!!!', productOrder)
     const qty = productOrder.dataValues.quantity
-    // console.log('Q-T-Y', qty)
     if (qty === null) {
       await productOrder.update({
         quantity: 1

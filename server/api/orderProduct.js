@@ -18,7 +18,6 @@ router.get('/', async (req, res, next) => {
 router.put('/:orderId', async (req, res, next) => {
   const {quantity, productId, orderId} = req.body
   try {
-    // console.log('INSIDE THE UPDATE PRODUCT WORKS', orderId, productId, quantity)
     if (req.session.passport) {
       const productToUpdate = await OrderProduct.findOne({
         where: {
@@ -43,7 +42,6 @@ router.put('/:orderId', async (req, res, next) => {
         })
         res.status(200).json(loggedUserOrder)
       }
-      // console.log('--->  FOUND AN ORDER W A USER  <---')
     } else {
       const productToUpdate = await OrderProduct.findOne({
         where: {
@@ -52,7 +50,6 @@ router.put('/:orderId', async (req, res, next) => {
         },
         include: Product
       })
-      // console.log('--->  FOUND AN ORDER W/O A USER  <---')
       await productToUpdate.update({
         quantity: quantity,
         productId: productId,
@@ -67,7 +64,6 @@ router.put('/:orderId', async (req, res, next) => {
       })
       res.status(200).json(loggedUserOrder)
     }
-    // console.log('-------->  UPDATED AN ORDER  <--------')
   } catch (err) {
     next(err)
   }
@@ -76,12 +72,6 @@ router.put('/:orderId', async (req, res, next) => {
 router.delete('/:orderId', async (req, res, next) => {
   try {
     if (req.session.passport) {
-      console.log(
-        'ORDER ID',
-        req.params.orderId,
-        'PRODUCT ID',
-        req.body.productId
-      )
       await OrderProduct.destroy({
         where: {
           // userId: req.session.passport.user,
@@ -98,7 +88,6 @@ router.delete('/:orderId', async (req, res, next) => {
         include: Product
       })
       res.status(200).json(loggedUserOrder)
-      console.log('--->  DELETED AN ORDER W A USER  <---')
     } else {
       await OrderProduct.destroy({
         where: {
@@ -114,7 +103,6 @@ router.delete('/:orderId', async (req, res, next) => {
         include: Product
       })
       res.status(200).json(loggedUserOrder)
-      console.log('--->  DELETED AN ORDER W/O A USER  <---')
     }
   } catch (err) {
     next(err)

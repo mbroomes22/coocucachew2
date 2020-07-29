@@ -10,16 +10,14 @@ import ls from 'local-storage'
 export class CartProducts extends React.Component {
   render() {
     const lsProducts = ls.get('cartProducts')
-    console.log("product", this.props.product)
-    console.log("lsproducts", lsProducts)
     return (
       <div>
         {this.props.cart[0].products
           ? lsProducts.map(product => (
               <div key={product.id} className="cartproducts">
                 <Link to={`/products/${product.id}`}>
-                  <img src={product.imageUrl} width="50" /> &times; {product.orderProduct.quantity}
-
+                  <img src={product.imageUrl} width="50" /> &times;{' '}
+                  {product.orderProduct.quantity}
                   <h4>{product.name}</h4>
                 </Link>
                 <CartQuantity product={product} cart={this.props.cart[0]} />

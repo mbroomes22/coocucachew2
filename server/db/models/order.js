@@ -18,22 +18,4 @@ const Order = db.define('order', {
   }
 })
 
-///make a hook to sum up the cart
-// const getSubTotal = async function(order) {
-//   try {
-//     const orderedProducts = await OrderProduct.get('/', order.id)
-//     console.log(orderedProducts)
-//     let pOSubTotal = 0
-//     orderedProducts.forEach(oP => {
-//       oPSubTotal += oP.price
-//     })
-//     order.subtotal = pOSubTotal
-//   } catch (err) {
-//     console.error(err)
-//   }
-// }
-
-// Order.beforeCreate(getSubTotal())
-// Order.beforeUpdate(getSubTotal())
-
 module.exports = Order

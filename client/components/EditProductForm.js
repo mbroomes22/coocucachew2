@@ -24,7 +24,6 @@ export class EditProductForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
 
-    // console.log("EDIT this.state", this.state)
     const prodID = this.props.id
 
     const productInfo = {
@@ -90,12 +89,14 @@ export class EditProductForm extends React.Component {
 
 const mapState = state => {
   return {
-  products: state.products,
-  prodId: state.products.id
-}}
+    products: state.products,
+    prodId: state.products.id
+  }
+}
 
 const mapDispatch = dispatch => ({
-  editProduct: (prodId, productInfo) => dispatch(editProduct(prodId, productInfo))
+  editProduct: (prodId, productInfo) =>
+    dispatch(editProduct(prodId, productInfo))
 })
 
 export default connect(mapState, mapDispatch)(EditProductForm)

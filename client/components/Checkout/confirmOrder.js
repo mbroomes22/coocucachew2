@@ -30,7 +30,6 @@ export class ConfirmOrder extends Component {
 
   handleSubmit = (e, total) => {
     e.preventDefault()
-    console.log("this.props=>", this.props)
     const subTotal = total
     const finalTotal = total + 6
     this.props.addOrder(subTotal, finalTotal, this.props.cart[0].userId) //not sure if user's id is named userId and located in cart
@@ -64,7 +63,6 @@ export class ConfirmOrder extends Component {
     cart[0].products.map(
       item => (total += item.price.slice(1) * item.orderProduct.quantity)
     )
-    console.log("this.props=>", this.props)
     return (
       <div className="center">
         <br />
@@ -74,79 +72,78 @@ export class ConfirmOrder extends Component {
         <h1 className="header">Confirm Order Details</h1>
         <br />
         <div className="shippingInfo">
+          <div className="purchasing">
+            <h2>Shipping Address</h2>
+            <div className="card-container">
+              <ul className="card">
+                <ol>
+                  <h3>Name:</h3> {name}
+                  <br />
+                </ol>
+                <ol>
+                  <h3>Email:</h3> {email}
+                  <br />
+                </ol>
+                <ol>
+                  <h3>Street Address:</h3> {streetAddress}
+                  <br />
+                </ol>
+                <ol>
+                  <h3>ZIP code:</h3> {zipCode}
+                  <br />
+                </ol>
+                <ol>
+                  <h3>State:</h3> {state}
+                  <br />
+                </ol>
+              </ul>
+            </div>
+          </div>
 
-        <div className="purchasing">
-        <h2>Shipping Address</h2>
-        <div className="card-container">
-          <ul className="card">
-            <ol>
-              <h3>Name:</h3> {name}
-              <br />
-            </ol>
-            <ol>
-              <h3>Email:</h3> {email}
-              <br />
-            </ol>
-            <ol>
-              <h3>Street Address:</h3> {streetAddress}
-              <br />
-            </ol>
-            <ol>
-              <h3>ZIP code:</h3> {zipCode}
-              <br />
-            </ol>
-            <ol>
-              <h3>State:</h3> {state}
-              <br />
-            </ol>
-          </ul>
-        </div>
-        </div>
-
-        <div className="purchasing">
-        <h2>Payment Method</h2>
+          <div className="purchasing">
+            <h2>Payment Method</h2>
             <p>Stripe</p>
-        <br />
-        </div>
+            <br />
+          </div>
 
-        <div className="purchasing">
-        <h2>Review Items</h2>
+          <div className="purchasing">
+            <h2>Review Items</h2>
 
-        <ul className="checkout-card-container">
-          {cart[0].products &&
-            cart[0].products.map(item => (
-              <div key={item.id} className="checkout-card">
-                <ol>
-                  <h3>{item.name}</h3>
-                </ol>
-                <ol>
-                  <h3>
-                    <img src={item.imageUrl} width="75px" />
-                  </h3>
-                </ol>
-                <ol>
-                  <h3>Qty: {item.orderProduct.quantity}</h3>
-                </ol>
-                <ol>
-                  <h3>{item.price}</h3>
-                </ol>
-              </div>
-            ))}
-        </ul>
-        </div>
+            <ul className="checkout-card-container">
+              {cart[0].products &&
+                cart[0].products.map(item => (
+                  <div key={item.id} className="checkout-card">
+                    <ol>
+                      <h3>{item.name}</h3>
+                    </ol>
+                    <ol>
+                      <h3>
+                        <img src={item.imageUrl} width="75px" />
+                      </h3>
+                    </ol>
+                    <ol>
+                      <h3>Qty: {item.orderProduct.quantity}</h3>
+                    </ol>
+                    <ol>
+                      <h3>{item.price}</h3>
+                    </ol>
+                  </div>
+                ))}
+            </ul>
+          </div>
 
-        <div className="purchasing">
-        <h3>Subtotal</h3>
-        <p>${total}</p>
-        <br />
-        <h3>Shipping</h3>
-        <p>$6</p>
-        <br />
-        <h2>Total</h2>
-        <p>${total + 6}</p>
-        <br />
-        <br />
-        </div>
+          <div className="purchasing">
+            <h3>Subtotal</h3>
+            <p>${total}</p>
+            <br />
+            <h3>Shipping</h3>
+            <p>$6</p>
+            <br />
+            <h2>Total</h2>
+            <p>${total + 6}</p>
+            <br />
+            <br />
+          </div>
         </div>
         <button
           type="submit"

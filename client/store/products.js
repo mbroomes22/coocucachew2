@@ -78,7 +78,6 @@ export const editProduct = (prodId, productInfo) => async dispatch => {
 export const removeAProduct = removeId => async dispatch => {
   try {
     await axios.delete(`/api/products/${removeId}`)
-    console.log("DATA=>", removeId)
     dispatch(deletedProduct(removeId))
   } catch (error) {
     console.error(error)
@@ -101,9 +100,12 @@ export default function productsReducer(state = [], action) {
       return action.products
 
     case DELETE_PRODUCT:
-      console.log("redux state", state)
-      console.log("action.product", action.deleted)
-      console.log("filtered state =>", state.filter(prod => prod.id !== action.deleted))
+      console.log('redux state', state)
+      console.log('action.product', action.deleted)
+      console.log(
+        'filtered state =>',
+        state.filter(prod => prod.id !== action.deleted)
+      )
       return [...state].filter(prod => prod.id !== action.deleted)
 
     default:

@@ -67,7 +67,6 @@ export const updateCartDbProduct = (
   orderProduct
 ) => async dispatch => {
   try {
-    // console.log('INSIDE THE UPDATE PRODUCT WORKS', orderId, orderProduct)
     const res = await axios.put(`/api/orderProduct/${orderId}`, orderProduct)
     dispatch(updatedProduct(res.data))
   } catch (error) {
@@ -83,7 +82,6 @@ export const deleteProductFromDbCart = (
     const res = await axios.delete(`/api/orderProduct/${orderId}`, {
       data: {productId: productId}
     })
-    console.log('RES DATA', res.data)
     dispatch(deletedProduct(res.data))
   } catch (error) {
     console.error(error)
@@ -112,7 +110,6 @@ export const updateDbOrderProduct = (
   orderId,
   orderProduct
 ) => async dispatch => {
-  console.log('START RUNING THUNK', orderId)
   try {
     const res = await axios.put(`/api/order/${orderId}`, orderProduct)
     dispatch(updatedDbOrderProduct(res.data))

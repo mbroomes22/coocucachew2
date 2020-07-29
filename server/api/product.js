@@ -39,8 +39,6 @@ router.put('/:productId', isAdmin, async (req, res, next) => {
         id: req.params.productId
       }
     })
-    console.log('express req.params=>', req.params)
-    console.log('express req.body=>', req.body)
     const updateProduct = await updatedProduct.update(req.body)
     res.json(updateProduct)
   } catch (error) {
