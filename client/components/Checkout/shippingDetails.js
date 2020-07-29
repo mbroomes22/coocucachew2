@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 export default class UserDetails extends Component {
   continue = evt => {
@@ -14,10 +15,22 @@ export default class UserDetails extends Component {
     }
   }
 
+  goToCart = (e, url) => {
+    e.preventDefault()
+    window.location.href = url
+  }
+
   render() {
     const {values, handleChange} = this.props
     return (
-      <div>
+      <div className="center">
+        <button
+          type="submit"
+          className="buttonC"
+          onClick={e => this.goToCart(e, '/cart')}
+        >
+          Return to Cart
+        </button>
         <h1 className="header">Enter Shipping Details</h1>
         <label>
           Name:

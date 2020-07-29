@@ -280,6 +280,11 @@ form div {
   margin-right: 40%;
 } */
 
+.pay {
+  display: flex;
+  justify-content: center;
+}
+
 .header {
   background-color: #dfb3bd;
   display: flex;
@@ -854,8 +859,6 @@ form div {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background: rgb(230, 173, 207);
-  border-radius: 10px;
 }
 
 .flickity-enabled.is-draggable .flickity-viewport {
