@@ -425,11 +425,10 @@ form div {
   background-color: white;
   width: 300px;
   border-radius: 15px 15px 0 0;
-  filter: opacity(95%);
 }
 
 .card:hover {
-  filter: none;
+  filter: grayscale(90%);
 }
 
 .card h3 {
